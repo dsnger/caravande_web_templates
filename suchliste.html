@@ -1,834 +1,1004 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Caravan24 - Einfach und sicher Wohnmobile mieten &amp; vermieten!</title>
-    <meta name="description" content="DESCRIPTION">
-    <link href="https://fonts.googleapis.com/css?family=Hind:400,500,600&amp;display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <script defer src="https://kit.fontawesome.com/93864702c8.js"></script>
-    <!--if lt IE 9script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
-    -->
-  </head>
-  <body class="suchliste-page">
-    <!--header-->
-    <!-- page header-->
-    <header class="page-header position-fixed sticky-fix">
-      <div class="container-fluid">
-        <!-- navigationsleiste-->
-        <nav class="navbar navbar-expand-lg align-items-center my-1"><a class="navbar-brand text-hide" href="index.html"><img class="navbar-brand__img d-inline-block align-top" src="assets/img/caravan24-logo.svg" alt="Logo Caravan24"><span class="navbar-brand-name">Caravan24</span></a>
-          <h5 class="navbar-claim col ml-2">Caravan24 - Wohnmobile vermieten &amp; mieten </h5>
-          <!--hamburger button-->
-          <!-- navigations menu-->
-          <button class="btn btn-sm btn-outline-primary ml-auto" type="link">Vermieter werden</button>
-        </nav>
-      </div>
-    </header>
-    <!--Suchformular-->
-    <section class="page-searchform search-fixed-fix">
-      <div class="container-fluid wrapper">
-        <form class="hero-searchform__form form-inline">
-          <div class="form-row">
-            <div class="col input-group hero-searchform__vehicle">
-              <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-default btn-c24icon-sm mr-2 active">
-                  <input type="radio" name="vehicleType" value="1" autocomplete="off"><i class="c24icon c24icon-alkoven" data-toggle-search="tooltip" data-placement="bottom" title="Wohnmobil"></i>
-                </label>
-                <label class="btn btn-default btn-c24icon-sm">
-                  <input type="radio" name="vehicleType" value="2" autocomplete="off"><i class="c24icon c24icon-wohnwagen" data-toggle-search="tooltip" data-placement="bottom" title="Wohnwagen"></i>
-                </label>
-              </div>
-            </div>
-            <div class="col input-group hero-searchform__where">
-              <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span></div>
-              <input class="form-control flex-4" id="inputWhere" type="text" placeholder="Wo?" aria-label="Wo">
-            </div>
-            <div class="col input-group hero-searchform__daterange">
-              <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-calendar-alt"></i></span></div>
-              <input class="form-control" id="inputStartdate" name="daterange" type="text" placeholder="Abholung" aria-label="Abholung">
-            </div>
-            <div class="col input-group hero-searchform__submit">
-              <button class="btn btn-primary" type="submit">Suchen</button>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Vermieter werden - Caravan24 - Einfach und sicher Wohnmobile mieten &amp; vermieten!</title>
+  <meta name="description" content="DESCRIPTION">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/cust.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Hind:400,500,700&amp;display=swap" rel="stylesheet">
+  <link defer href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css"
+    rel="stylesheet">
+  <script defer src="https://kit.fontawesome.com/93864702c8.js"></script>
+  <!--if lt IE 9script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')-->
+  <script src="scripts/js/jquery-3.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="suchliste-page">
+  <!--header-->
+  <!-- page header-->
+  <header class="page-header position-fixed sticky-fix sticky">
+    <div class="container">
+      <!-- navigationsleiste-->
+      <nav class="navbar navbar-expand-lg align-items-center my-1"><a class="navbar-brand text-hide"
+          href="https://www.caravan24.de/"><img class="navbar-brand__img d-inline-block align-top"
+            src="assets/img/caravan24-logo.svg" alt="Logo Caravan24"><span
+            class="navbar-brand-name">Caravan24</span></a>
+        <h5 class="navbar-claim col ml-2">Wohnmobile mieten &amp; vermieten</h5>
+        <!--hamburger button-->
+        <!-- navigations menu-->
+        <button class="btn btn-sm btn-outline-primary ml-auto c24-btn-vermieter-werden" type="link"
+          onclick="window.location.href='https://www.caravan24.de/kontakt/anbieten.php'">Vermieter werden</button>
+      </nav>
+    </div>
+  </header>
+  <!--Suchformular-->
+  <section class="page-searchform search-fixed-fix">
+    <div class="container-fluid wrapper">
+      <form class="hero-searchform__form form-inline">
+        <div class="form-row">
+          <div class="col input-group hero-searchform__vehicle">
+            <div class="btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-default btn-c24icon-sm mr-2 active">
+                <input type="radio" name="vehicleType" value="1" autocomplete="off"><i class="c24icon c24icon-alkoven"
+                  data-toggle-search="tooltip" data-placement="bottom" title="Wohnmobil"></i>
+              </label>
+              <label class="btn btn-default btn-c24icon-sm">
+                <input type="radio" name="vehicleType" value="2" autocomplete="off"><i class="c24icon c24icon-wohnwagen"
+                  data-toggle-search="tooltip" data-placement="bottom" title="Wohnwagen"></i>
+              </label>
             </div>
           </div>
-        </form>
+          <div class="col input-group hero-searchform__where">
+            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <input class="form-control flex-4" id="inputWhere" type="text" placeholder="Wo?" aria-label="Wo">
+          </div>
+          <div class="col input-group hero-searchform__daterange">
+            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+            </div>
+            <input class="form-control" id="inputStartdate" name="daterange" type="text" placeholder="Abholung"
+              aria-label="Abholung">
+          </div>
+          <div class="col input-group hero-searchform__submit">
+            <button class="btn btn-primary" type="submit">Suchen</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <main class="page-content mx-auto">
+    <div class="container with-marginal">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+          <section class="searchfilter">
+            <div class="row">
+              <div class="col breadcrumb-links my-4 my-sm-4 d-xs-none d-md-flex">
+                <h5 class="d-inline"><i class="fas fa-filter mr-2"></i>Suchfilter:</h5>
+              </div>
+              <div class="col breadcrumb-links mt-4 mb-2 d-xs-flex d-md-none">
+                <button class="btn btn-primary px-3 mb-2" data-toggle="collapse" href="#collapseSearchfilter"
+                  role="button" aria-expanded="false" aria-controls="collapseSearchfilter"><i
+                    class="fas fa-filter mr-2"></i>Suchfilter</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="collapse" id="collapseSearchfilter">
+                  <form id="searchFilterForm">
+                    <div class="accordion" id="searchFilter">
+                      <!--akkordion 1-->
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h4 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                              data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Preis pro
+                              Nacht</button>
+                          </h4>
+                        </div>
+                        <div class="collapse" id="collapseOne" aria-labelledby="headingOne">
+                          <div class="card-body">
+                            <div class="col d-flex pt-4"><strong class="text-nowrap mr-3">10 €</strong>
+                              <input id="preisRange" type="text" value="" name="preisrange" data-provide="slider"
+                                data-slider-min="0" data-slider-max="500" data-slider-step="10"
+                                data-slider-value="[0,120]"><strong class="text-nowrap ml-2">400 €</strong>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--akkordion 2-->
+                      <div class="card">
+                        <div class="card-header" id="vehicleHeading">
+                          <h4 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                              data-target="#vehicleChoice" aria-expanded="false"
+                              aria-controls="vehicleChoice">Fahrzeugtyp</button>
+                          </h4>
+                        </div>
+                        <div class="collapse" id="vehicleChoice" aria-labelledby="vehicleHeading">
+                          <div class="card-body">
+                            <div class="d-flex flex-wrap">
+                              <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                                <label class="btn btn-default btn-c24icon-lg active">
+                                  <input id="Alkoven" type="checkbox" autocomplete="off" value="Alkoven">
+                                  <svg class="c24icon" width="100%" height="100%" viewBox="0 0 520 350"
+                                    xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="#img-c24-icon-alkoven"></use>
+                                  </svg>
+                                </label><small class="mb-2 text-center">Alkoven</small>
+                              </div>
+                              <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                                <label class="btn btn-default btn-c24icon-lg">
+                                  <input id="Kastenwagen" type="checkbox" autocomplete="off" value="Kastenwagen">
+                                  <svg class="c24icon" width="100%" height="100%" viewBox="0 0 520 350"
+                                    xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="#img-c24-icon-kastenwagen"></use>
+                                  </svg>
+                                </label><small class="mb-2 text-center">Kastenwagen</small>
+                              </div>
+                              <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                                <label class="btn btn-default btn-c24icon-lg">
+                                  <input id="Teilintegriert" type="checkbox" autocomplete="off" value="Teilintegriert">
+                                  <svg class="c24icon" width="100%" height="100%" viewBox="0 -60 520 350"
+                                    xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="#img-c24-icon-teilintegriert"></use>
+                                  </svg>
+                                </label><small class="mb-2 text-center">Teilintegriert</small>
+                              </div>
+                              <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                                <label class="btn btn-default btn-c24icon-lg">
+                                  <input id="Vollintegriert" type="checkbox" autocomplete="off" value="Vollintegriert">
+                                  <svg class="c24icon" width="100%" height="100%" viewBox="0 -30 520 350"
+                                    xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="#img-c24-icon-vollintegriert"></use>
+                                  </svg>
+                                </label><small class="mb-2 text-center">Vollintegriert</small>
+                              </div>
+                              <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                                <label class="btn btn-default btn-c24icon-lg">
+                                  <input id="Wohnwagen" type="checkbox" autocomplete="off" value="Wohnwagen">
+                                  <svg class="c24icon" width="100%" height="100%" viewBox="0 -30 520 350"
+                                    xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="#img-c24-icon-wohnwagen"></use>
+                                  </svg>
+                                </label><small class="mb-2 text-center">Wohnwagen </small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-header" id="headingThree">
+                          <h4 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Schlaf- /
+                              Sitzplätze</button>
+                          </h4>
+                        </div>
+                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree">
+                          <div class="card-body">
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                              <h6 class="mb-1">Schlafplätze</h6>
+                              <label class="btn btn-default mb-2 active">
+                                <input type="radio" name="schlafplaetze" value="1" autocomplete="off">1
+                              </label>
+                              <label class="btn btn-default mb-2">
+                                <input type="radio" name="schlafplaetze" value="2" autocomplete="off">2
+                              </label>
+                              <label class="btn btn-default mb-2">
+                                <input type="radio" name="schlafplaetze" value="3" autocomplete="off">3
+                              </label>
+                              <label class="btn btn-default mb-2">
+                                <input type="radio" name="schlafplaetze" value="4" autocomplete="off">4
+                              </label>
+                              <label class="btn btn-default mb-2">
+                                <input type="radio" name="schlafplaetze" value="5" autocomplete="off">5
+                              </label>
+                              <label class="btn btn-default mb-2">
+                                <input type="radio" name="schlafplaetze" value="6+" autocomplete="off">6+
+                              </label>
+                              <h6 class="mb-0 mt-2 mb-1">Sitzplätze</h6>
+                              <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-default mb-2 active">
+                                  <input type="radio" name="sitzplaetze" value="1" autocomplete="off">1
+                                </label>
+                                <label class="btn btn-default mb-2">
+                                  <input type="radio" name="sitzplaetze" value="2" autocomplete="off">2
+                                </label>
+                                <label class="btn btn-default mb-2">
+                                  <input type="radio" name="sitzplaetze" value="3" autocomplete="off">3
+                                </label>
+                                <label class="btn btn-default mb-2">
+                                  <input type="radio" name="sitzplaetze" value="4" autocomplete="off">4
+                                </label>
+                                <label class="btn btn-default mb-2">
+                                  <input type="radio" name="sitzplaetze" value="5" autocomplete="off">5
+                                </label>
+                                <label class="btn btn-default mb-2">
+                                  <input type="radio" name="sitzplaetze" value="6+" autocomplete="off">6+
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="heading">
+                          <h4 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                              data-target="#collapseFahrzeug" aria-expanded="false"
+                              aria-controls="collapseFour">Fahrzeugausstattung</button>
+                          </h4>
+                        </div>
+                        <div class="collapse" id="collapseFahrzeug" aria-labelledby="headingFour">
+                          <div class="card-body d-flex flex-column">
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="ESP" type="checkbox" value="ESP" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Esp">ESP</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="ABS" type="checkbox" value="ABS" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Abs">ABS</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Tempomat" type="checkbox" value="Tempomat" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Tempomat">Tempomat</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Rueckfahrkamera" type="checkbox" value="Rueckfahrkamera"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Rueckfahrkamera">Rückfahrkamera</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Servolenkung" type="checkbox" value="Servolenkung" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Servolenkung">Servolenkung</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Partikelfilter" type="checkbox" value="Partikelfilter" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Partikelfilter">Partikelfilter</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Zentralverriegelung" type="checkbox" value="Zentralverriegelung"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Zentralverriegelung">Zentralverriegelung</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Anhaengerkupplung" type="checkbox" value="Anhaengerkupplung"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Anhaengerkupplung">Anhängerkupplung</span>
+                            </div><br>
+                            <p><strong class="text-primary">Fahrerkabine</strong></p>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Kassettenspieler" type="checkbox" value="Kassettenspieler"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Kassettenspieler">Kassettenspieler</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="USB" type="checkbox" value="USB" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="USB">USB-Anschluss</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Navigation" type="checkbox" value="Navigation" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Navigation">Navigation</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Radio" type="checkbox" value="Radio" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Radio">Radio</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="CD" type="checkbox" value="CD" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="CD">CD-Player</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Bluetooth" type="checkbox" value="Bluetooth" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Bluetooth">Bluetooth</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="MP3" type="checkbox" value="MP3" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="MP3">MP3-Anschluss</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="iPhone" type="checkbox" value="iPhone" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="iPhone">iPhone- / iPod-Anschluss</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingFour">
+                          <h4 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                              data-target="#collapseFour" aria-expanded="false"
+                              aria-controls="collapseFour">Fahrzeugeinrichtung</button>
+                          </h4>
+                        </div>
+                        <div class="collapse" id="collapseFour" aria-labelledby="headingFour">
+                          <div class="card-body d-flex flex-column">
+                            <p><strong class="text-primary">Strom / Wasser / Heizung</strong></p>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Generator" type="checkbox" value="Generator" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Generator">Generator</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Starkstromanschluss" type="checkbox" value="Starkstromanschluss"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Starkstromanschluss">Starkstromanschluss</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Versorgerbatterie" type="checkbox" value="Versorgerbatterie"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Versorgerbatterie">Versorgerbatterie</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="EHeizung" type="checkbox" value="EHeizung" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="EHeizung">Elektrische Heizung</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Gasheizung" type="checkbox" value="Gasheizung" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Gasheizung">Gasheizung</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Solarzellen" type="checkbox" value="Solarzellen" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Solarzellen">Solarzellen</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Klimaanlage" type="checkbox" value="Klimaanlage" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Klimaanlage">Klimaanlage</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="FahrerKlimaanlage" type="checkbox" value="FahrerKlimaanlage"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="FahrerKlimaanlage">Klimaanlage
+                                Fahrerkabine</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="AufbauKlimaanlage" type="checkbox" value="AufbauKlimaanlage"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="AufbauKlimaanlage">Klimaanlage Aufbau</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="MobilKlimaanlage" type="checkbox" value="MobilKlimaanlage"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="MobilKlimaanlage">Klimaanlage mobil</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Fussbodenheizung" type="checkbox" value="Fussbodenheizung"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Fussbodenheizung">Fußbodenheizung</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Wintertauglich" type="checkbox" value="Wintertauglich" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Wintertauglich">Wintertauglich</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Wasseranschluss" type="checkbox" value="Wasseranschluss"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Wasseranschluss">Wasseranschluss</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Warmwasser" type="checkbox" value="Warmwasser" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Warmwasser">Warmwasser</span>
+                            </div><br>
+                            <p><strong class="text-primary">Küche</strong></p>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Backofen" type="checkbox" value="Backofen" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Backofen">Backofen</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Herd" type="checkbox" value="Herd" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Herd">Herd</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Spuele" type="checkbox" value="Spuele" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Spuele">Spüle</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Dunstabzugshaube" type="checkbox" value="Dunstabzugshaube"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Dunstabzugshaube">Dunstabzugshaube</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Mikrowelle" type="checkbox" value="Mikrowelle" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Mikrowelle">Mikrowelle</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Grillfunktion" type="checkbox" value="Grillfunktion" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Grillfunktion">Grillfunktion</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Kuehlschrank" type="checkbox" value="Kuehlschrank" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Kuehlschrank">Kühlschrank</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Gefrierfach" type="checkbox" value="Gefrierfach" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Gefrierfach">Gefrierfach</span>
+                            </div><br>
+                            <p><strong class="text-primary">Bad</strong></p>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Campingtoilette" type="checkbox" value="Campingtoilette"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Campingtoilette">Campingtoilette </span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Aussendusche" type="checkbox" value="Aussendusche" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Aussendusche">Außendusche </span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Dusche" type="checkbox" value="Dusche" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Dusche">Dusche </span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Toilette" type="checkbox" value="Toilette " autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Toilette ">Toilette </span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Waschbecken" type="checkbox" value="Waschbecken" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Waschbecken">Waschbecken</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingFive">
+                          <h4 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                              data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Zubehör /
+                              Extras</button>
+                          </h4>
+                        </div>
+                        <div class="collapse" id="collapseFive" aria-labelledby="headingFive">
+                          <div class="card-body d-flex flex-column">
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="GetrennterSchlafbereich" type="checkbox" value="GetrennterSchlafbereich"
+                                  autocomplete="off"><i class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="GetrennterSchlafbereich">Getrennter
+                                Schlafbereich</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Einzelbetten" type="checkbox" value="Einzelbetten" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Einzelbetten">Einzelbetten</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Fahrradtraeger" type="checkbox" value="Fahrradtraeger" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Fahrradtraeger">Fahrradträger</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Barrierefrei" type="checkbox" value="Barrierefrei" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Barrierefrei">Barrierefrei</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Allinclusive" type="checkbox" value="Allinclusive" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Allinclusive">All-inclusive</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Geschirrset" type="checkbox" value="Geschirrset" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Geschirrset">Geschirrset</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Campingset" type="checkbox" value="Campingset" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Campingset">Campingset </span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Haustiere" type="checkbox" value="Haustiere" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Haustiere">Haustiere erlaubt</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Dachluke" type="checkbox" value="Dachluke" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Dachluke">Dachluke</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Vorzelt" type="checkbox" value="Vorzelt" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Vorzelt">Vorzelt</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Markise" type="checkbox" value="Markise" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Markise">Markise</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="Heckgarage" type="checkbox" value="Heckgarage" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="Heckgarage">Heckgarage</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="extras2" type="checkbox" value="" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="extras2">Audio System</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="DVD" type="checkbox" value="DVD" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="DVD">DVD</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="SAT" type="checkbox" value="SAT" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="SAT">SAT-Anlage</span>
+                            </div>
+                            <div class="btn-group-toggle mb-2" data-toggle="buttons">
+                              <label class="btn btn-default btn-checkbox mr-2">
+                                <input id="TV" type="checkbox" value="TV" autocomplete="off"><i
+                                  class="fas fa-check"></i>
+                              </label><span class="label" data-labelfor="TV">TV</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-tertiary btn-sm mt-3" type="reset" value="reset"><i
+                        class="fas fa-times mr-2"></i>zurücksetzen</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+          <section class="gallery-grid result-list">
+            <div class="row">
+              <div class="col breadcrumb-links my-4 my-sm-4">
+                <h5 class="d-inline"><a href="/index.html" title="zur Startseite">Startseite <small><i
+                        class="fas fa-chevron-right breadcumb-sep mr-2"></i></small></a></h5>
+                <h5 class="d-inline"><small><i class="fas fa-list mr-2"></i></small> Suchergebnisse</h5>
+              </div>
+            </div>
+            <!--CHANGE LIST VIEW BUTTONS-->
+            <div class="row">
+              <div class="col col-sm-8 col-md-8 col-lg-9 flex-2">
+                <nav aria-label="Seitennavigation">
+                  <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">vorherige</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">nächste</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col d-xs-none d-lg-flex text-right justify-content-end">
+                <div class="gallery-grid-view">
+                  <button class="btn btn-default active" id="BtnListView" title="Listenansicht"> <i
+                      class="fas fa-th-list"></i></button>
+                  <button class="btn btn-default" id="BtnModuleView" title="Kachelansicht"> <i
+                      class="fas fa-th"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="row gallery-grid-results list-view">
+              <div class="result-box">
+                <div class="card">
+                  <div class="search-result carousel slide">
+                    <ol class="carousel-indicators">
+                      <li class="active" data-slide-to="0"></li>
+                      <li data-slide-to="2"></li>
+                      <li data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                      </div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
+                    </div>
+                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
+                  </div>
+                  <div class="card-body text-left">
+                    <h3>Bürstner Argos Time A 670 G</h3>
+                    <h4>Campingbus</h4>
+                    <div class="card-footer">
+                      <ul class="card-body__feature-list">
+                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
+                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
+                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
+                      </ul>
+                      <p class="card-button text-right"><a class="btn btn-secondary"
+                          href="Detailansicht.html">Details</a></p>
+                    </div>
+                  </div>
+                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
+                        class="card-ribbon-text-small">/Nacht</span></span></div>
+                </div>
+              </div>
+              <div class="result-box">
+                <div class="card">
+                  <div class="search-result carousel slide">
+                    <ol class="carousel-indicators">
+                      <li class="active" data-slide-to="0"></li>
+                      <li data-slide-to="2"></li>
+                      <li data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                      </div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
+                    </div>
+                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
+                  </div>
+                  <div class="card-body text-left">
+                    <h3>Bürstner Argos Time A 670 G</h3>
+                    <h4>Campingbus</h4>
+                    <div class="card-footer">
+                      <ul class="card-body__feature-list">
+                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
+                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
+                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
+                      </ul>
+                      <p class="card-button text-right"><a class="btn btn-secondary"
+                          href="Detailansicht.html">Details</a></p>
+                    </div>
+                  </div>
+                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
+                        class="card-ribbon-text-small">/Nacht</span></span></div>
+                </div>
+              </div>
+              <div class="result-box">
+                <div class="card">
+                  <div class="search-result carousel slide">
+                    <ol class="carousel-indicators">
+                      <li class="active" data-slide-to="0"></li>
+                      <li data-slide-to="2"></li>
+                      <li data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                      </div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
+                    </div>
+                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
+                  </div>
+                  <div class="card-body text-left">
+                    <h3>Bürstner Argos Time A 670 G</h3>
+                    <h4>Campingbus</h4>
+                    <div class="card-footer">
+                      <ul class="card-body__feature-list">
+                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
+                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
+                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
+                      </ul>
+                      <p class="card-button text-right"><a class="btn btn-secondary"
+                          href="Detailansicht.html">Details</a></p>
+                    </div>
+                  </div>
+                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
+                        class="card-ribbon-text-small">/Nacht</span></span></div>
+                </div>
+              </div>
+              <div class="result-box">
+                <div class="card">
+                  <div class="search-result carousel slide">
+                    <ol class="carousel-indicators">
+                      <li class="active" data-slide-to="0"></li>
+                      <li data-slide-to="2"></li>
+                      <li data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                      </div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
+                    </div>
+                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
+                  </div>
+                  <div class="card-body text-left">
+                    <h3>Bürstner Argos Time A 670 G</h3>
+                    <h4>Campingbus</h4>
+                    <div class="card-footer">
+                      <ul class="card-body__feature-list">
+                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
+                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
+                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
+                      </ul>
+                      <p class="card-button text-right"><a class="btn btn-secondary"
+                          href="Detailansicht.html">Details</a></p>
+                    </div>
+                  </div>
+                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
+                        class="card-ribbon-text-small">/Nacht</span></span></div>
+                </div>
+              </div>
+              <div class="result-box">
+                <div class="card">
+                  <div class="search-result carousel slide">
+                    <ol class="carousel-indicators">
+                      <li class="active" data-slide-to="0"></li>
+                      <li data-slide-to="2"></li>
+                      <li data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                      </div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
+                    </div>
+                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
+                  </div>
+                  <div class="card-body text-left">
+                    <h3>Bürstner Argos Time A 670 G</h3>
+                    <h4>Campingbus</h4>
+                    <div class="card-footer">
+                      <ul class="card-body__feature-list">
+                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
+                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
+                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
+                      </ul>
+                      <p class="card-button text-right"><a class="btn btn-secondary"
+                          href="Detailansicht.html">Details</a></p>
+                    </div>
+                  </div>
+                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
+                        class="card-ribbon-text-small">/Nacht</span></span></div>
+                </div>
+              </div>
+              <div class="result-box">
+                <div class="card">
+                  <div class="search-result carousel slide">
+                    <ol class="carousel-indicators">
+                      <li class="active" data-slide-to="0"></li>
+                      <li data-slide-to="2"></li>
+                      <li data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                      </div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
+                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
+                    </div>
+                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
+                  </div>
+                  <div class="card-body text-left">
+                    <h3>Bürstner Argos Time A 670 G</h3>
+                    <h4>Campingbus</h4>
+                    <div class="card-footer">
+                      <ul class="card-body__feature-list">
+                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
+                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
+                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
+                      </ul>
+                      <p class="card-button text-right"><a class="btn btn-secondary"
+                          href="Detailansicht.html">Details</a></p>
+                    </div>
+                  </div>
+                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
+                        class="card-ribbon-text-small">/Nacht</span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-sm-8 col-md-8 col-lg-9 flex-2">
+                <nav aria-label="Seitennavigation">
+                  <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">vorherige</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">nächste</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark text-white">
+    <section class="footer-content">
+      <div class="container wrapper">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <h3>Unternehmen</h3>
+            <p><strong>Caravan24.com</strong><br>Prinzipalmarkt/Drubbel 3<br>48143 Münster<br> www.caravan24.com</p>
+            <p>T: 0251 2803 844<br>F: 0251 2803 845<br>E-Mail: <a
+                href="mailto:test@testtamtam.de">info@caravan24.com</a>
+              <caravan24 class="com"></caravan24>
+            </p>
+          </div>
+          <div class="col-lg mb-5">
+            <h3>Caravan24 - Wohnmobile und Wohnwagen online mieten</h3>
+            <p></p> Bei Caravan24 finden Sie online Wohnmobile oder Wohnwagen direkt in Ihrer näheren Umgebung. Sie
+            erhalten alle Informationen und können direkt online die Verfügbarkeit ermitteln und Ihr Wunsch-Wohnmobil
+            buchen.
+            <p><small>Icons von <a
+                  href="https://www.freevector.com/free-outstanding-caravan-vectors-25880">FreeVector.com</a></small>
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Navigation</h3>
+            <ul class="list-group">
+              <li><a href="#" alt="" title="Zur Startseite"> <small><i
+                      class="fas fa-chevron-right mr-2"></i></small>Startseite</a></li>
+              <li><a href="#" alt="" title="Wohnmobile"> <small><i
+                      class="fas fa-chevron-right mr-2"></i></small>Wohnmobile mieten</a></li>
+              <li><a href="#" alt="" title="Vermieten"> <small><i
+                      class="fas fa-chevron-right mr-2"></i></small>Wohnmobile anbieten</a></li>
+              <li><a href="#" alt="" title="Über uns"> <small><i
+                      class="fas fa-chevron-right mr-2"></i></small>Kontakt</a></li>
+              <li><a href="#" alt="" title="Impressum"> <small><i
+                      class="fas fa-chevron-right mr-2"></i></small>Impressum</a></li>
+              <li><a href="#" alt="" title="AGB"> <small><i class="fas fa-chevron-right mr-2"></i></small>AGB</a></li>
+              <li><a href="#" alt="" title="Datenschutz"> <small><i
+                      class="fas fa-chevron-right mr-2"></i></small>Datenschutzerklärung</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
-    <main class="page-content mx-auto">
-      <div class="container with-marginal">
-        <div class="row">
-          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
-            <section class="searchfilter">
-              <div class="row">
-                <div class="col breadcrumb-links my-4 my-sm-4 d-xs-none d-md-flex">
-                  <h5 class="d-inline"><i class="fas fa-filter mr-2"></i>Suchfilter:</h5>
-                </div>
-                <div class="col breadcrumb-links mt-4 mb-2 d-xs-flex d-md-none">
-                  <button class="btn btn-primary px-3 mb-2" data-toggle="collapse" href="#collapseSearchfilter" role="button" aria-expanded="false" aria-controls="collapseSearchfilter"><i class="fas fa-filter mr-2"></i>Suchfilter</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="collapse" id="collapseSearchfilter">
-                    <form id="searchFilterForm">
-                      <div class="accordion" id="searchFilter">
-                        <!--akkordion 1-->
-                        <div class="card">
-                          <div class="card-header" id="headingOne">
-                            <h4 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Preis pro Nacht</button>
-                            </h4>
-                          </div>
-                          <div class="collapse" id="collapseOne" aria-labelledby="headingOne">
-                            <div class="card-body">
-                              <div class="col d-flex pt-4"><strong class="text-nowrap mr-3">10 €</strong>
-                                <input id="preisRange" type="text" value="" name="preisrange" data-provide="slider" data-slider-min="0" data-slider-max="500" data-slider-step="10" data-slider-value="[0,120]"><strong class="text-nowrap ml-2">400 €</strong>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--akkordion 2-->
-                        <div class="card">
-                          <div class="card-header" id="vehicleHeading">
-                            <h4 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#vehicleChoice" aria-expanded="false" aria-controls="vehicleChoice">Fahrzeugtyp</button>
-                            </h4>
-                          </div>
-                          <div class="collapse" id="vehicleChoice" aria-labelledby="vehicleHeading">
-                            <div class="card-body">
-                              <div class="d-flex flex-wrap">
-                                <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
-                                  <label class="btn btn-default btn-c24icon-lg active">
-                                    <input id="Alkoven" type="checkbox" autocomplete="off" value="Alkoven">
-                                    <svg class="c24icon" width="100%" height="100%" viewBox="0 0 520 350" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-                                      <use xlink:href="#img-c24-icon-alkoven"></use>
-                                    </svg>
-                                  </label><small class="mb-2 text-center">Alkoven</small>
-                                </div>
-                                <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
-                                  <label class="btn btn-default btn-c24icon-lg">
-                                    <input id="Kastenwagen" type="checkbox" autocomplete="off" value="Kastenwagen">
-                                    <svg class="c24icon" width="100%" height="100%" viewBox="0 0 520 350" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-                                      <use xlink:href="#img-c24-icon-kastenwagen"></use>
-                                    </svg>
-                                  </label><small class="mb-2 text-center">Kastenwagen</small>
-                                </div>
-                                <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
-                                  <label class="btn btn-default btn-c24icon-lg">
-                                    <input id="Teilintegriert" type="checkbox" autocomplete="off" value="Teilintegriert">
-                                    <svg class="c24icon" width="100%" height="100%" viewBox="0 -60 520 350" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-                                      <use xlink:href="#img-c24-icon-teilintegriert"></use>
-                                    </svg>
-                                  </label><small class="mb-2 text-center">Teilintegriert</small>
-                                </div>
-                                <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons"> 
-                                  <label class="btn btn-default btn-c24icon-lg">
-                                    <input id="Vollintegriert" type="checkbox" autocomplete="off" value="Vollintegriert">
-                                    <svg class="c24icon" width="100%" height="100%" viewBox="0 -30 520 350" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-                                      <use xlink:href="#img-c24-icon-vollintegriert"></use>
-                                    </svg>
-                                  </label><small class="mb-2 text-center">Vollintegriert</small>
-                                </div>
-                                <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">   
-                                  <label class="btn btn-default btn-c24icon-lg">
-                                    <input id="Wohnwagen" type="checkbox" autocomplete="off" value="Wohnwagen">
-                                    <svg class="c24icon" width="100%" height="100%" viewBox="0 -30 520 350" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-                                      <use xlink:href="#img-c24-icon-wohnwagen"></use>
-                                    </svg>
-                                  </label><small class="mb-2 text-center">Wohnwagen     </small>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card-header" id="headingThree">
-                            <h4 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Schlaf- / Sitzplätze</button>
-                            </h4>
-                          </div>
-                          <div class="collapse" id="collapseThree" aria-labelledby="headingThree">
-                            <div class="card-body">
-                              <div class="btn-group-toggle" data-toggle="buttons">
-                                <h6 class="mb-1">Schlafplätze</h6>
-                                <label class="btn btn-default mb-2 active">
-                                  <input type="radio" name="schlafplaetze" value="1" autocomplete="off">1
-                                </label>
-                                <label class="btn btn-default mb-2">
-                                  <input type="radio" name="schlafplaetze" value="2" autocomplete="off">2
-                                </label>
-                                <label class="btn btn-default mb-2">
-                                  <input type="radio" name="schlafplaetze" value="3" autocomplete="off">3
-                                </label>
-                                <label class="btn btn-default mb-2">
-                                  <input type="radio" name="schlafplaetze" value="4" autocomplete="off">4
-                                </label>
-                                <label class="btn btn-default mb-2">
-                                  <input type="radio" name="schlafplaetze" value="5" autocomplete="off">5
-                                </label>
-                                <label class="btn btn-default mb-2">
-                                  <input type="radio" name="schlafplaetze" value="6+" autocomplete="off">6+
-                                </label>
-                                <h6 class="mb-0 mt-2 mb-1">Sitzplätze</h6>
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                  <label class="btn btn-default mb-2 active">
-                                    <input type="radio" name="sitzplaetze" value="1" autocomplete="off">1
-                                  </label>
-                                  <label class="btn btn-default mb-2">
-                                    <input type="radio" name="sitzplaetze" value="2" autocomplete="off">2
-                                  </label>
-                                  <label class="btn btn-default mb-2">
-                                    <input type="radio" name="sitzplaetze" value="3" autocomplete="off">3
-                                  </label>
-                                  <label class="btn btn-default mb-2">
-                                    <input type="radio" name="sitzplaetze" value="4" autocomplete="off">4
-                                  </label>
-                                  <label class="btn btn-default mb-2">
-                                    <input type="radio" name="sitzplaetze" value="5" autocomplete="off">5
-                                  </label>
-                                  <label class="btn btn-default mb-2">
-                                    <input type="radio" name="sitzplaetze" value="6+" autocomplete="off">6+
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="heading">
-                            <h4 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFahrzeug" aria-expanded="false" aria-controls="collapseFour">Fahrzeugausstattung</button>
-                            </h4>
-                          </div>
-                          <div class="collapse" id="collapseFahrzeug" aria-labelledby="headingFour">
-                            <div class="card-body d-flex flex-column">
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="ESP" type="checkbox" value="ESP" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Esp">ESP</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="ABS" type="checkbox" value="ABS" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Abs">ABS</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Tempomat" type="checkbox" value="Tempomat" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Tempomat">Tempomat</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Rueckfahrkamera" type="checkbox" value="Rueckfahrkamera" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Rueckfahrkamera">Rückfahrkamera</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Servolenkung" type="checkbox" value="Servolenkung" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Servolenkung">Servolenkung</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Partikelfilter" type="checkbox" value="Partikelfilter" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Partikelfilter">Partikelfilter</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Zentralverriegelung" type="checkbox" value="Zentralverriegelung" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Zentralverriegelung">Zentralverriegelung</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Anhaengerkupplung" type="checkbox" value="Anhaengerkupplung" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Anhaengerkupplung">Anhängerkupplung</span>
-                              </div><br>
-                              <p><strong class="text-primary">Fahrerkabine</strong></p>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Kassettenspieler" type="checkbox" value="Kassettenspieler" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Kassettenspieler">Kassettenspieler</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="USB" type="checkbox" value="USB" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="USB">USB-Anschluss</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Navigation" type="checkbox" value="Navigation" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Navigation">Navigation</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Radio" type="checkbox" value="Radio" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Radio">Radio</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="CD" type="checkbox" value="CD" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="CD">CD-Player</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Bluetooth" type="checkbox" value="Bluetooth" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Bluetooth">Bluetooth</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="MP3" type="checkbox" value="MP3" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="MP3">MP3-Anschluss</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="iPhone" type="checkbox" value="iPhone" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="iPhone">iPhone- / iPod-Anschluss</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingFour">
-                            <h4 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Fahrzeugeinrichtung</button>
-                            </h4>
-                          </div>
-                          <div class="collapse" id="collapseFour" aria-labelledby="headingFour">
-                            <div class="card-body d-flex flex-column">
-                              <p><strong class="text-primary">Strom / Wasser / Heizung</strong></p>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Generator" type="checkbox" value="Generator" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Generator">Generator</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Starkstromanschluss" type="checkbox" value="Starkstromanschluss" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Starkstromanschluss">Starkstromanschluss</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Versorgerbatterie" type="checkbox" value="Versorgerbatterie" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Versorgerbatterie">Versorgerbatterie</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="EHeizung" type="checkbox" value="EHeizung" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="EHeizung">Elektrische Heizung</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Gasheizung" type="checkbox" value="Gasheizung" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Gasheizung">Gasheizung</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Solarzellen" type="checkbox" value="Solarzellen" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Solarzellen">Solarzellen</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Klimaanlage" type="checkbox" value="Klimaanlage" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Klimaanlage">Klimaanlage</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="FahrerKlimaanlage" type="checkbox" value="FahrerKlimaanlage" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="FahrerKlimaanlage">Klimaanlage Fahrerkabine</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="AufbauKlimaanlage" type="checkbox" value="AufbauKlimaanlage" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="AufbauKlimaanlage">Klimaanlage Aufbau</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="MobilKlimaanlage" type="checkbox" value="MobilKlimaanlage" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="MobilKlimaanlage">Klimaanlage mobil</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Fussbodenheizung" type="checkbox" value="Fussbodenheizung" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Fussbodenheizung">Fußbodenheizung</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Wintertauglich" type="checkbox" value="Wintertauglich" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Wintertauglich">Wintertauglich</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Wasseranschluss" type="checkbox" value="Wasseranschluss" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Wasseranschluss">Wasseranschluss</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Warmwasser" type="checkbox" value="Warmwasser" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Warmwasser">Warmwasser</span>
-                              </div><br>
-                              <p><strong class="text-primary">Küche</strong></p>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Backofen" type="checkbox" value="Backofen" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Backofen">Backofen</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Herd" type="checkbox" value="Herd" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Herd">Herd</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Spuele" type="checkbox" value="Spuele" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Spuele">Spüle</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Dunstabzugshaube" type="checkbox" value="Dunstabzugshaube" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Dunstabzugshaube">Dunstabzugshaube</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Mikrowelle" type="checkbox" value="Mikrowelle" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Mikrowelle">Mikrowelle</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Grillfunktion" type="checkbox" value="Grillfunktion" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Grillfunktion">Grillfunktion</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Kuehlschrank" type="checkbox" value="Kuehlschrank" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Kuehlschrank">Kühlschrank</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Gefrierfach" type="checkbox" value="Gefrierfach" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Gefrierfach">Gefrierfach</span>
-                              </div><br>
-                              <p><strong class="text-primary">Bad</strong></p>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Campingtoilette" type="checkbox" value="Campingtoilette" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Campingtoilette">Campingtoilette  </span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Aussendusche" type="checkbox" value="Aussendusche" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Aussendusche">Außendusche </span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Dusche" type="checkbox" value="Dusche" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Dusche">Dusche  </span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Toilette" type="checkbox" value="Toilette " autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Toilette ">Toilette  </span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Waschbecken" type="checkbox" value="Waschbecken" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Waschbecken">Waschbecken</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingFive">
-                            <h4 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Zubehör / Extras</button>
-                            </h4>
-                          </div>
-                          <div class="collapse" id="collapseFive" aria-labelledby="headingFive">
-                            <div class="card-body d-flex flex-column">
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="GetrennterSchlafbereich" type="checkbox" value="GetrennterSchlafbereich" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="GetrennterSchlafbereich">Getrennter Schlafbereich</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Einzelbetten" type="checkbox" value="Einzelbetten" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Einzelbetten">Einzelbetten</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Fahrradtraeger" type="checkbox" value="Fahrradtraeger" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Fahrradtraeger">Fahrradträger</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Barrierefrei" type="checkbox" value="Barrierefrei" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Barrierefrei">Barrierefrei</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Allinclusive" type="checkbox" value="Allinclusive" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Allinclusive">All-inclusive</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Geschirrset" type="checkbox" value="Geschirrset" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Geschirrset">Geschirrset</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Campingset" type="checkbox" value="Campingset" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Campingset">Campingset      </span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Haustiere" type="checkbox" value="Haustiere" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Haustiere">Haustiere erlaubt</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Dachluke" type="checkbox" value="Dachluke" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Dachluke">Dachluke</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Vorzelt" type="checkbox" value="Vorzelt" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Vorzelt">Vorzelt</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Markise" type="checkbox" value="Markise" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Markise">Markise</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="Heckgarage" type="checkbox" value="Heckgarage" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="Heckgarage">Heckgarage</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="extras2" type="checkbox" value="" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="extras2">Audio System</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="DVD" type="checkbox" value="DVD" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="DVD">DVD</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="SAT" type="checkbox" value="SAT" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="SAT">SAT-Anlage</span>
-                              </div>
-                              <div class="btn-group-toggle mb-2" data-toggle="buttons">
-                                <label class="btn btn-default btn-checkbox mr-2">
-                                  <input id="TV" type="checkbox" value="TV" autocomplete="off"><i class="fas fa-check"></i>
-                                </label><span class="label" data-labelfor="TV">TV</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <button class="btn btn-tertiary btn-sm mt-3" type="reset" value="reset"><i class="fas fa-times mr-2"></i>zurücksetzen</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
-            <section class="gallery-grid result-list">
-              <div class="row">
-                <div class="col breadcrumb-links my-4 my-sm-4">
-                  <h5 class="d-inline"><a href="/index.html" title="zur Startseite">Startseite  <small><i class="fas fa-chevron-right breadcumb-sep mr-2"></i></small></a></h5>
-                  <h5 class="d-inline"><small><i class="fas fa-list mr-2"></i></small> Suchergebnisse</h5>
-                </div>
-              </div>
-              <!--CHANGE LIST VIEW BUTTONS-->
-              <div class="row">
-                <div class="col col-sm-8 col-md-8 col-lg-9 flex-2">
-                  <nav aria-label="Seitennavigation">
-                    <ul class="pagination">
-                      <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">vorherige</a></li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item"><a class="page-link" href="#">nächste</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="col d-xs-none d-lg-flex text-right justify-content-end">     
-                  <div class="gallery-grid-view">
-                    <button class="btn btn-default active" id="BtnListView" title="Listenansicht"> <i class="fas fa-th-list"></i></button>
-                    <button class="btn btn-default" id="BtnModuleView" title="Kachelansicht"> <i class="fas fa-th"></i></button>
-                  </div>
-                </div>
-              </div>
-              <div class="row gallery-grid-results list-view">
-                <div class="result-box">
-                  <div class="card">
-                    <div class="search-result carousel slide">
-                      <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0"></li>
-                        <li data-slide-to="2"></li>
-                        <li data-slide-to="3"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                      </div>
-                      <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-                    </div>
-                    <div class="card-body text-left"> 
-                      <h3>Bürstner Argos Time A 670 G</h3>
-                      <h4>Campingbus</h4>
-                      <div class="card-footer">
-                        <ul class="card-body__feature-list">
-                          <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                          <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                          <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                        </ul>
-                        <p class="card-button text-right"><a class="btn btn-secondary" href="Detailansicht.html">Details</a></p>
-                      </div>
-                    </div>
-                    <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span class="card-ribbon-text-small">/Nacht</span></span></div>
-                  </div>
-                </div>
-                <div class="result-box">
-                  <div class="card">
-                    <div class="search-result carousel slide">
-                      <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0"></li>
-                        <li data-slide-to="2"></li>
-                        <li data-slide-to="3"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                      </div>
-                      <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-                    </div>
-                    <div class="card-body text-left"> 
-                      <h3>Bürstner Argos Time A 670 G</h3>
-                      <h4>Campingbus</h4>
-                      <div class="card-footer">
-                        <ul class="card-body__feature-list">
-                          <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                          <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                          <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                        </ul>
-                        <p class="card-button text-right"><a class="btn btn-secondary" href="Detailansicht.html">Details</a></p>
-                      </div>
-                    </div>
-                    <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span class="card-ribbon-text-small">/Nacht</span></span></div>
-                  </div>
-                </div>
-                <div class="result-box">
-                  <div class="card">
-                    <div class="search-result carousel slide">
-                      <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0"></li>
-                        <li data-slide-to="2"></li>
-                        <li data-slide-to="3"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                      </div>
-                      <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-                    </div>
-                    <div class="card-body text-left"> 
-                      <h3>Bürstner Argos Time A 670 G</h3>
-                      <h4>Campingbus</h4>
-                      <div class="card-footer">
-                        <ul class="card-body__feature-list">
-                          <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                          <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                          <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                        </ul>
-                        <p class="card-button text-right"><a class="btn btn-secondary" href="Detailansicht.html">Details</a></p>
-                      </div>
-                    </div>
-                    <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span class="card-ribbon-text-small">/Nacht</span></span></div>
-                  </div>
-                </div>
-                <div class="result-box">
-                  <div class="card">
-                    <div class="search-result carousel slide">
-                      <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0"></li>
-                        <li data-slide-to="2"></li>
-                        <li data-slide-to="3"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                      </div>
-                      <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-                    </div>
-                    <div class="card-body text-left"> 
-                      <h3>Bürstner Argos Time A 670 G</h3>
-                      <h4>Campingbus</h4>
-                      <div class="card-footer">
-                        <ul class="card-body__feature-list">
-                          <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                          <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                          <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                        </ul>
-                        <p class="card-button text-right"><a class="btn btn-secondary" href="Detailansicht.html">Details</a></p>
-                      </div>
-                    </div>
-                    <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span class="card-ribbon-text-small">/Nacht</span></span></div>
-                  </div>
-                </div>
-                <div class="result-box">
-                  <div class="card">
-                    <div class="search-result carousel slide">
-                      <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0"></li>
-                        <li data-slide-to="2"></li>
-                        <li data-slide-to="3"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                      </div>
-                      <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-                    </div>
-                    <div class="card-body text-left"> 
-                      <h3>Bürstner Argos Time A 670 G</h3>
-                      <h4>Campingbus</h4>
-                      <div class="card-footer">
-                        <ul class="card-body__feature-list">
-                          <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                          <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                          <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                        </ul>
-                        <p class="card-button text-right"><a class="btn btn-secondary" href="Detailansicht.html">Details</a></p>
-                      </div>
-                    </div>
-                    <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span class="card-ribbon-text-small">/Nacht</span></span></div>
-                  </div>
-                </div>
-                <div class="result-box">
-                  <div class="card">
-                    <div class="search-result carousel slide">
-                      <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0"></li>
-                        <li data-slide-to="2"></li>
-                        <li data-slide-to="3"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                        <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                      </div>
-                      <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
-                    </div>
-                    <div class="card-body text-left"> 
-                      <h3>Bürstner Argos Time A 670 G</h3>
-                      <h4>Campingbus</h4>
-                      <div class="card-footer">
-                        <ul class="card-body__feature-list">
-                          <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                          <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                          <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                        </ul>
-                        <p class="card-button text-right"><a class="btn btn-secondary" href="Detailansicht.html">Details</a></p>
-                      </div>
-                    </div>
-                    <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span class="card-ribbon-text-small">/Nacht</span></span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">    
-                <div class="col col-sm-8 col-md-8 col-lg-9 flex-2">
-                  <nav aria-label="Seitennavigation">
-                    <ul class="pagination">
-                      <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">vorherige</a></li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item"><a class="page-link" href="#">nächste</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
+    <section class="footer-legal">
+      <div class="container-fluid p-1 bg-black text white">
+        <ul class="list-inline font-weight-light">
+          <li class="mr-3"><a href="http://www.caravan24.com">Caravan24.com</a></li>
+          <li>
+            &copy; 2019 by Caravan24.com</li>
+        </ul>
       </div>
-    </main>
-    <footer class="bg-dark text-white">
-      <section class="footer-content">
-        <div class="container wrapper">
-          <div class="row">
-            <div class="col-lg-3 mb-3">
-              <h3>Unternehmen</h3>
-              <p><strong>Caravan24.com</strong><br>Prinzipalmarkt/Drubbel 3<br>48143 Münster<br> www.caravan24.com</p>
-              <p>T: 0251 2803 844<br>F: 0251 2803 845<br>E-Mail: <a href="mailto:test@testtamtam.de">info@caravan24.com</a>
-                <caravan24 class="com"></caravan24>
-              </p>
-            </div>
-            <div class="col-lg mb-5">
-              <h3>Caravan24 - Wohnmobile und Wohnwagen online mieten</h3>
-              <p></p> Bei Caravan24 finden Sie online Wohnmobile oder Wohnwagen direkt in Ihrer näheren Umgebung. Sie erhalten alle Informationen und können direkt online die Verfügbarkeit ermitteln und Ihr Wunsch-Wohnmobil buchen.
-              <p><small>Icons von <a href="https://www.freevector.com/free-outstanding-caravan-vectors-25880">FreeVector.com</a></small></p>
-            </div>
-            <div class="col-lg-3">
-              <h3>Navigation</h3>
-              <ul class="list-group">
-                <li><a href="#" alt="" title="Zur Startseite"> <small><i class="fas fa-chevron-right mr-2"></i></small>Startseite</a></li>
-                <li><a href="#" alt="" title="Wohnmobile"> <small><i class="fas fa-chevron-right mr-2"></i></small>Wohnmobile mieten</a></li>
-                <li><a href="#" alt="" title="Vermieten"> <small><i class="fas fa-chevron-right mr-2"></i></small>Wohnmobile anbieten</a></li>
-                <li><a href="#" alt="" title="Über uns"> <small><i class="fas fa-chevron-right mr-2"></i></small>Kontakt</a></li>
-                <li><a href="#" alt="" title="Impressum"> <small><i class="fas fa-chevron-right mr-2"></i></small>Impressum</a></li>
-                <li><a href="#" alt="" title="AGB"> <small><i class="fas fa-chevron-right mr-2"></i></small>AGB</a></li>
-                <li><a href="#" alt="" title="Datenschutz"> <small><i class="fas fa-chevron-right mr-2"></i></small>Datenschutzerklärung</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="footer-legal">  
-        <div class="container-fluid p-1 bg-black text white">
-          <ul class="list-inline font-weight-light">
-            <li class="mr-3"><a href="http://www.caravan24.com">Caravan24.com</a></li>
-            <li>
-               &copy; 2019 by Caravan24.com</li>
-          </ul>
-        </div>
-      </section>
-      <svg display="none">
-        <defs>
-          <g id="img-c24-icon-alkoven">
-            <path xmlns="http://www.w3.org/2000/svg" d="M34.47,49.74H182.21A52.76,52.76,0,0,0,224.6,28.26,69.37,69.37,0,0,1,280.36,0H397.68A56.44,56.44,0,0,1,451,37.89a28.9,28.9,0,0,1-27.3,38.38H337.39v5h75.74a48.85,48.85,0,0,1,39.2,19.82L485.4,146c6.21,8.45,19.13,25.24,18.5,39v86.11a8.29,8.29,0,0,1-8.29,8.29H464.94a37.29,37.29,0,0,1-72.73,0H215.42A37.27,37.27,0,0,1,150,294.48a37.26,37.26,0,0,1-65.37-15.12H23.73A23.76,23.76,0,0,1,0,255.63V84.21A34.5,34.5,0,0,1,34.47,49.74ZM428.58,291.8a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,428.58,291.8ZM353.33,171.7h97.06L420,129.44a15.34,15.34,0,0,0-12.32-6.24H353.33a4,4,0,0,0-4,4v40.5A4,4,0,0,0,353.33,171.7ZM282.68,42.28H407V34H282.68ZM219.9,171.35h47.18a4,4,0,0,0,4-4V127.79a4,4,0,0,0-4-4H219.9a4,4,0,0,0-4,4v39.56A4,4,0,0,0,219.9,171.35ZM179.06,291.8a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,179.06,291.8Zm-58,0a20.73,20.73,0,1,0-20.72-20.73A20.76,20.76,0,0,0,121,291.8ZM99,171.35h98.38a4,4,0,0,0,4-4V127.79a4,4,0,0,0-4-4H99a4,4,0,0,0-4,4v39.56A4,4,0,0,0,99,171.35Z"></path>
-          </g>
-          <g id="img-c24-icon-integriert">
-            <path xmlns="http://www.w3.org/2000/svg" d="M0,34V30.14C0,13.5,14.5,0,31.13,0h334a34.15,34.15,0,0,1,34.14,34.17,3,3,0,0,1-3,3H388l30.16,29.48A69.48,69.48,0,0,0,446,84.56a85.71,85.71,0,0,1,58,81.11v40.75a8.29,8.29,0,0,1-8.28,8.29H452.51a37.29,37.29,0,0,1-72.73,0H167.34a37.29,37.29,0,0,1-72.73,0H30.94A31,31,0,0,1,0,183.77V34.57C0,34.37,0,34.19,0,34ZM416.14,227.15a20.73,20.73,0,1,0-20.72-20.73A20.77,20.77,0,0,0,416.14,227.15ZM314.52,107.87H408c-5-3.65-14.68-15.76-18.94-20.26l-23-25.25c-9.88-10.45-17.8-17.44-32.19-17.44H314.52a4,4,0,0,0-4,4v55A4,4,0,0,0,314.52,107.87Zm-143.9-31h61.89a4,4,0,0,0,4-4V48.05a4,4,0,0,0-4-4H170.62a4,4,0,0,0-4,4V72.91A4,4,0,0,0,170.62,76.91ZM131,227.15a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,131,227.15ZM36.49,108.62H137a4,4,0,0,0,4-4V48.81a4,4,0,0,0-4-4H36.49a4,4,0,0,0-4,4v55.81A4,4,0,0,0,36.49,108.62Z"></path>
-          </g>
-          <g id="img-c24-icon-kastenwagen">
-            <path xmlns="http://www.w3.org/2000/svg" d="M8.29,103.15H23.21L276.15,27.24,365.73.35a8.29,8.29,0,1,1,4.76,15.88L286.82,41.34l0,61.81h51.44a8.29,8.29,0,0,1,8.29,8.29v19.92h22.22c29.06,0,51.69,18.07,63.83,44.47l13.32,23c22.58,2.7,58.13,29,58.13,52.27V316.2a8.29,8.29,0,0,1-8.29,8.29H474.06a37.3,37.3,0,0,1-72.73,0H161.54a37.3,37.3,0,0,1-72.73,0H30.94A31,31,0,0,1,0,293.55V111.44A8.29,8.29,0,0,1,8.29,103.15ZM437.7,336.92A20.73,20.73,0,1,0,417,316.2,20.75,20.75,0,0,0,437.7,336.92ZM364.15,199.75h48.38L404,181.15A41.51,41.51,0,0,0,366.28,157h-3.13a3,3,0,0,0-3,3v35.76A4,4,0,0,0,364.15,199.75ZM245.38,307.91h60.51V194.75a30.26,30.26,0,0,0-60.51,0Zm-120.21,29a20.73,20.73,0,1,0-20.72-20.72A20.76,20.76,0,0,0,125.17,336.92ZM48.76,213.4H199.93a4,4,0,0,0,4-4V163.52a4,4,0,0,0-4-4H48.76a4,4,0,0,0-4,4V209.4A4,4,0,0,0,48.76,213.4Z"></path>
-          </g>
-          <g id="img-c24-icon-teilintegriert">
-            <path xmlns="http://www.w3.org/2000/svg" d="M0,34V30.14C0,13.5,14.5,0,31.13,0h334a34.15,34.15,0,0,1,34.14,34.17,3,3,0,0,1-3,3H388l30.16,29.48A69.48,69.48,0,0,0,446,84.56a85.71,85.71,0,0,1,58,81.11v40.75a8.29,8.29,0,0,1-8.28,8.29H452.51a37.29,37.29,0,0,1-72.73,0H167.34a37.29,37.29,0,0,1-72.73,0H30.94A31,31,0,0,1,0,183.77V34.57C0,34.37,0,34.19,0,34ZM416.14,227.15a20.73,20.73,0,1,0-20.72-20.73A20.77,20.77,0,0,0,416.14,227.15ZM314.52,107.87H408c-5-3.65-14.68-15.76-18.94-20.26l-23-25.25c-9.88-10.45-17.8-17.44-32.19-17.44H314.52a4,4,0,0,0-4,4v55A4,4,0,0,0,314.52,107.87Zm-143.9-31h61.89a4,4,0,0,0,4-4V48.05a4,4,0,0,0-4-4H170.62a4,4,0,0,0-4,4V72.91A4,4,0,0,0,170.62,76.91ZM131,227.15a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,131,227.15ZM36.49,108.62H137a4,4,0,0,0,4-4V48.81a4,4,0,0,0-4-4H36.49a4,4,0,0,0-4,4v55.81A4,4,0,0,0,36.49,108.62Z"></path>
-          </g>
-          <g id="img-c24-icon-vollintegriert">
-            <path xmlns="http://www.w3.org/2000/svg" d="M504,54.71V8.29A8.29,8.29,0,0,0,495.72,0H362.26a54.79,54.79,0,0,0-54.08,46.42H40a40,40,0,0,0-40,40V213.61a31,31,0,0,0,30.94,30.94H65.6A37.28,37.28,0,0,0,131,259.67a37.28,37.28,0,0,0,65.38-15.12H379.78a37.3,37.3,0,0,0,72.73,0h43.21a8.29,8.29,0,0,0,8.29-8.29V140.15a48.51,48.51,0,0,0-9.5-29L461.45,66.25c-.83-1.13-1.72-2.2-2.64-3.25h36.91A8.29,8.29,0,0,0,504,54.71ZM102,257a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,102,257ZM53.05,154.19V105.28h126v48.91ZM160,257a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,160,257Zm141.76-29H228V109.42h73.78Zm114.39,29a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,416.14,257Zm47-132.51H363.63V79.58h58.62a15.57,15.57,0,0,1,12.49,6.31ZM475.83,34.4H351.48V28.6H475.83Z"></path>
-          </g>
-          <g id="img-c24-icon-wohnwagen">
-            <path xmlns="http://www.w3.org/2000/svg" d="M38.69,20.15h88.48V11.49A11.5,11.5,0,0,1,138.66,0h80.18a11.49,11.49,0,0,1,11.49,11.5v8.65h141A38.74,38.74,0,0,1,410,58.84l23.68,163.35h52.93a8.37,8.37,0,0,1,8.44,7.64,8.18,8.18,0,0,1-8.16,8.72H452.53v20.17a8.35,8.35,0,0,1-7.63,8.44,8.18,8.18,0,0,1-8.73-8.16V238.55H290.46a36.8,36.8,0,0,1-71.76,0H8.18A8.18,8.18,0,0,1,0,230.37V58.84A38.69,38.69,0,0,1,38.69,20.15ZM371.29,156V102.68a4,4,0,0,0-4-4H271.41a4,4,0,0,0-4,4V156a4,4,0,0,0,4,4h95.88A4,4,0,0,0,371.29,156ZM254.58,250.82a20.45,20.45,0,1,0-20.45-20.45A20.48,20.48,0,0,0,254.58,250.82ZM191.14,160H245.3a4,4,0,0,0,4-4V102.68a4,4,0,0,0-4-4H191.14a4,4,0,0,0-4,4V156A4,4,0,0,0,191.14,160ZM46.81,222.14h76.07v-121A4.09,4.09,0,0,0,118.79,97H50.9a4.09,4.09,0,0,0-4.09,4.09Z"></path>
-          </g>
-        </defs>
-      </svg>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"> </script>
-    <script src="scripts/js/vendor-dist.js"></script>
-    <script src="scripts/js/app-dist.js"></script>
-  </body>
+    </section>
+    <svg display="none">
+      <defs>
+        <g id="img-c24-icon-alkoven">
+          <path xmlns="http://www.w3.org/2000/svg"
+            d="M34.47,49.74H182.21A52.76,52.76,0,0,0,224.6,28.26,69.37,69.37,0,0,1,280.36,0H397.68A56.44,56.44,0,0,1,451,37.89a28.9,28.9,0,0,1-27.3,38.38H337.39v5h75.74a48.85,48.85,0,0,1,39.2,19.82L485.4,146c6.21,8.45,19.13,25.24,18.5,39v86.11a8.29,8.29,0,0,1-8.29,8.29H464.94a37.29,37.29,0,0,1-72.73,0H215.42A37.27,37.27,0,0,1,150,294.48a37.26,37.26,0,0,1-65.37-15.12H23.73A23.76,23.76,0,0,1,0,255.63V84.21A34.5,34.5,0,0,1,34.47,49.74ZM428.58,291.8a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,428.58,291.8ZM353.33,171.7h97.06L420,129.44a15.34,15.34,0,0,0-12.32-6.24H353.33a4,4,0,0,0-4,4v40.5A4,4,0,0,0,353.33,171.7ZM282.68,42.28H407V34H282.68ZM219.9,171.35h47.18a4,4,0,0,0,4-4V127.79a4,4,0,0,0-4-4H219.9a4,4,0,0,0-4,4v39.56A4,4,0,0,0,219.9,171.35ZM179.06,291.8a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,179.06,291.8Zm-58,0a20.73,20.73,0,1,0-20.72-20.73A20.76,20.76,0,0,0,121,291.8ZM99,171.35h98.38a4,4,0,0,0,4-4V127.79a4,4,0,0,0-4-4H99a4,4,0,0,0-4,4v39.56A4,4,0,0,0,99,171.35Z">
+          </path>
+        </g>
+        <g id="img-c24-icon-integriert">
+          <path xmlns="http://www.w3.org/2000/svg"
+            d="M0,34V30.14C0,13.5,14.5,0,31.13,0h334a34.15,34.15,0,0,1,34.14,34.17,3,3,0,0,1-3,3H388l30.16,29.48A69.48,69.48,0,0,0,446,84.56a85.71,85.71,0,0,1,58,81.11v40.75a8.29,8.29,0,0,1-8.28,8.29H452.51a37.29,37.29,0,0,1-72.73,0H167.34a37.29,37.29,0,0,1-72.73,0H30.94A31,31,0,0,1,0,183.77V34.57C0,34.37,0,34.19,0,34ZM416.14,227.15a20.73,20.73,0,1,0-20.72-20.73A20.77,20.77,0,0,0,416.14,227.15ZM314.52,107.87H408c-5-3.65-14.68-15.76-18.94-20.26l-23-25.25c-9.88-10.45-17.8-17.44-32.19-17.44H314.52a4,4,0,0,0-4,4v55A4,4,0,0,0,314.52,107.87Zm-143.9-31h61.89a4,4,0,0,0,4-4V48.05a4,4,0,0,0-4-4H170.62a4,4,0,0,0-4,4V72.91A4,4,0,0,0,170.62,76.91ZM131,227.15a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,131,227.15ZM36.49,108.62H137a4,4,0,0,0,4-4V48.81a4,4,0,0,0-4-4H36.49a4,4,0,0,0-4,4v55.81A4,4,0,0,0,36.49,108.62Z">
+          </path>
+        </g>
+        <g id="img-c24-icon-kastenwagen">
+          <path xmlns="http://www.w3.org/2000/svg"
+            d="M8.29,103.15H23.21L276.15,27.24,365.73.35a8.29,8.29,0,1,1,4.76,15.88L286.82,41.34l0,61.81h51.44a8.29,8.29,0,0,1,8.29,8.29v19.92h22.22c29.06,0,51.69,18.07,63.83,44.47l13.32,23c22.58,2.7,58.13,29,58.13,52.27V316.2a8.29,8.29,0,0,1-8.29,8.29H474.06a37.3,37.3,0,0,1-72.73,0H161.54a37.3,37.3,0,0,1-72.73,0H30.94A31,31,0,0,1,0,293.55V111.44A8.29,8.29,0,0,1,8.29,103.15ZM437.7,336.92A20.73,20.73,0,1,0,417,316.2,20.75,20.75,0,0,0,437.7,336.92ZM364.15,199.75h48.38L404,181.15A41.51,41.51,0,0,0,366.28,157h-3.13a3,3,0,0,0-3,3v35.76A4,4,0,0,0,364.15,199.75ZM245.38,307.91h60.51V194.75a30.26,30.26,0,0,0-60.51,0Zm-120.21,29a20.73,20.73,0,1,0-20.72-20.72A20.76,20.76,0,0,0,125.17,336.92ZM48.76,213.4H199.93a4,4,0,0,0,4-4V163.52a4,4,0,0,0-4-4H48.76a4,4,0,0,0-4,4V209.4A4,4,0,0,0,48.76,213.4Z">
+          </path>
+        </g>
+        <g id="img-c24-icon-teilintegriert">
+          <path xmlns="http://www.w3.org/2000/svg"
+            d="M0,34V30.14C0,13.5,14.5,0,31.13,0h334a34.15,34.15,0,0,1,34.14,34.17,3,3,0,0,1-3,3H388l30.16,29.48A69.48,69.48,0,0,0,446,84.56a85.71,85.71,0,0,1,58,81.11v40.75a8.29,8.29,0,0,1-8.28,8.29H452.51a37.29,37.29,0,0,1-72.73,0H167.34a37.29,37.29,0,0,1-72.73,0H30.94A31,31,0,0,1,0,183.77V34.57C0,34.37,0,34.19,0,34ZM416.14,227.15a20.73,20.73,0,1,0-20.72-20.73A20.77,20.77,0,0,0,416.14,227.15ZM314.52,107.87H408c-5-3.65-14.68-15.76-18.94-20.26l-23-25.25c-9.88-10.45-17.8-17.44-32.19-17.44H314.52a4,4,0,0,0-4,4v55A4,4,0,0,0,314.52,107.87Zm-143.9-31h61.89a4,4,0,0,0,4-4V48.05a4,4,0,0,0-4-4H170.62a4,4,0,0,0-4,4V72.91A4,4,0,0,0,170.62,76.91ZM131,227.15a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,131,227.15ZM36.49,108.62H137a4,4,0,0,0,4-4V48.81a4,4,0,0,0-4-4H36.49a4,4,0,0,0-4,4v55.81A4,4,0,0,0,36.49,108.62Z">
+          </path>
+        </g>
+        <g id="img-c24-icon-vollintegriert">
+          <path xmlns="http://www.w3.org/2000/svg"
+            d="M504,54.71V8.29A8.29,8.29,0,0,0,495.72,0H362.26a54.79,54.79,0,0,0-54.08,46.42H40a40,40,0,0,0-40,40V213.61a31,31,0,0,0,30.94,30.94H65.6A37.28,37.28,0,0,0,131,259.67a37.28,37.28,0,0,0,65.38-15.12H379.78a37.3,37.3,0,0,0,72.73,0h43.21a8.29,8.29,0,0,0,8.29-8.29V140.15a48.51,48.51,0,0,0-9.5-29L461.45,66.25c-.83-1.13-1.72-2.2-2.64-3.25h36.91A8.29,8.29,0,0,0,504,54.71ZM102,257a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,102,257ZM53.05,154.19V105.28h126v48.91ZM160,257a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,160,257Zm141.76-29H228V109.42h73.78Zm114.39,29a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,416.14,257Zm47-132.51H363.63V79.58h58.62a15.57,15.57,0,0,1,12.49,6.31ZM475.83,34.4H351.48V28.6H475.83Z">
+          </path>
+        </g>
+        <g id="img-c24-icon-wohnwagen">
+          <path xmlns="http://www.w3.org/2000/svg"
+            d="M38.69,20.15h88.48V11.49A11.5,11.5,0,0,1,138.66,0h80.18a11.49,11.49,0,0,1,11.49,11.5v8.65h141A38.74,38.74,0,0,1,410,58.84l23.68,163.35h52.93a8.37,8.37,0,0,1,8.44,7.64,8.18,8.18,0,0,1-8.16,8.72H452.53v20.17a8.35,8.35,0,0,1-7.63,8.44,8.18,8.18,0,0,1-8.73-8.16V238.55H290.46a36.8,36.8,0,0,1-71.76,0H8.18A8.18,8.18,0,0,1,0,230.37V58.84A38.69,38.69,0,0,1,38.69,20.15ZM371.29,156V102.68a4,4,0,0,0-4-4H271.41a4,4,0,0,0-4,4V156a4,4,0,0,0,4,4h95.88A4,4,0,0,0,371.29,156ZM254.58,250.82a20.45,20.45,0,1,0-20.45-20.45A20.48,20.48,0,0,0,254.58,250.82ZM191.14,160H245.3a4,4,0,0,0,4-4V102.68a4,4,0,0,0-4-4H191.14a4,4,0,0,0-4,4V156A4,4,0,0,0,191.14,160ZM46.81,222.14h76.07v-121A4.09,4.09,0,0,0,118.79,97H50.9a4.09,4.09,0,0,0-4.09,4.09Z">
+          </path>
+        </g>
+      </defs>
+    </svg>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"> </script>
+  <script src="scripts/js/vendor-dist.js"></script>
+  <script src="scripts/js/app-dist.js"></script>
+</body>
+
 </html>

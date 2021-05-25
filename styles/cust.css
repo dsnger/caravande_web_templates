@@ -63,6 +63,10 @@ section.page-details-infobox .detail-page-infobox h3 {
   }
 }
 
+.ac_results {
+  top: 290px !important;
+}
+
 .c24-intro {
   display: block;
   font-size: 1.125rem;
@@ -146,9 +150,9 @@ section.page-details-infobox .detail-page-infobox h3 {
 
 .module-view .result-box {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 20%;
-  flex: 0 0 20%;
-  max-width: 20%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 
 .gallery-grid .card .card-body h3 {
@@ -162,4 +166,9 @@ section.page-details-infobox .detail-page-infobox h3 {
     flex: 0 0 50%;
     max-width: 50%;
   }
+}
+
+button.baguetteBox-button:focus,
+button.baguetteBox-button:active  {
+  outline: none;
 }
