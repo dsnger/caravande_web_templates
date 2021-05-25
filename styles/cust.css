@@ -1,0 +1,63 @@
+﻿.page-link.active{
+	 color:#ffffff;
+	 background-color:#f8a913;
+}
+.page-details .carousel .carousel-inner{
+	max-height:inherit !important;
+}
+.gallery-grid .card .card-body h3 {
+	text-transform: none !important;
+	margin-right:90px;
+}
+section.page-details-infobox .detail-page-infobox .booking-date, section.page-details-infobox .detail-page-infobox h3 {
+	text-transform: none !important;
+}
+
+@media (min-width: 992px) {
+.handlerlist .col-lg-5,
+.handlerlist.gallery-grid .list-view .card .carousel,
+.handlerlist.gallery-grid .list-view .card .img-frame {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 30% !important;
+	flex: 0 0 30% !important;
+	max-width: 30% !important;
+}
+.handlerlist .col-lg-7,
+.handlerlist.gallery-grid .list-view .card .card-body {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 70% !important;
+	flex: 0 0 70% !important;
+	max-width: 70% !important;
+}
+
+.my-1 {
+	margin-top: 0 !important;
+}
+.navbar-brand img{
+	min-width:275px;
+}
+body > header.sticky, body > header.sticky-fix {
+	height: 77px;
+}
+.search-fixed-fix{
+	top:77px;
+}
+.page-searchform + main {
+	margin-top: 134px;
+}
+.navbar-claim
+{
+	font-size: 36px !important;
+	padding-top:7px;
+	text-align:center
+}
+body > header.sticky-fix .navbar-brand, body > header.sticky .navbar-brand {
+	max-width: 275px  !important;
+}
+}
+@media (max-width: 991px) {
+.navbar-brand img{
+	min-width:150px;
+}
+
+}

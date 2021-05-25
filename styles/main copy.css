@@ -13665,6 +13665,7 @@ body > header.sticky .nav-brand {
   margin-bottom: 0;
   height: auto;
 }
+
 @media (max-width: 1439.98px) {
   .hero > .container,
   .hero > .container-fluid {
