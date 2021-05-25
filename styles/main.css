@@ -13632,7 +13632,7 @@ body > header.sticky .nav-brand {
   }
   body > header + .hero,
   body > header + main {
-    margin-top: 90px;
+    margin-top: 77px;
   }
   body > header.sticky,
   body > header.sticky-fix {
@@ -13666,27 +13666,25 @@ body > header.sticky .nav-brand {
   height: auto;
 }
 
-@media (max-width: 1439.98px) {
-  .hero > .container,
-  .hero > .container-fluid {
-    padding: 0;
-  }
-  .hero > .container-fluid > .row,
-  .hero > .container > .row {
-    margin: 0;
-  }
-  .hero > .container-fluid > .row > .col-xs,
-  .hero > .container > .row > .col-xs {
-    padding: 0;
-  }
+.hero > .container,
+.hero > .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
+.hero > .container-fluid > .row,
+.hero > .container > .row {
+  margin: 0;
+}
+.hero > .container-fluid > .row > .col-xs,
+.hero > .container > .row > .col-xs {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .hero img {
   display: none;
 }
 @media (min-width: 1024px) {
-  .hero {
-    margin-top: 90px;
-  }
   .hero img {
     display: block;
     width: 100%;
@@ -14113,10 +14111,13 @@ section.page-details-infobox
 @media (min-width: 1024px) {
   .search-fixed-fix {
     position: relative;
-    top: 56px;
+    top: 77px;
+  }
+  .search-fixed {
+    top: 77px;
   }
   .page-searchform + main {
-    margin-top: 56px;
+    margin-top: 77px;
   }
 }
 @media (min-width: 1280px) {
@@ -14396,7 +14397,7 @@ section.page-details-infobox
   margin: auto 0 0 0;
 }
 .gallery-grid .card .card-button {
-  margin: 1rem 0 0 auto;
+  margin: 1.5rem 0 0 auto;
   display: block;
   width: 100%;
 }
