@@ -157,7 +157,7 @@ section.page-details-infobox .detail-page-infobox h3 {
   }
 }
 
-.module-view .result-box {
+.c24-modelle .module-view .result-box {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
@@ -186,7 +186,7 @@ section.page-details-infobox .detail-page-infobox h3 {
   margin-right: 0px;
 }
 @media (min-width: 768px) {
-  .module-view .result-box {
+  .c24-modelle .module-view .result-box {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -194,7 +194,7 @@ section.page-details-infobox .detail-page-infobox h3 {
   }
 }
 @media (min-width: 992px) {
-  .module-view .result-box {
+  .c24-modelle .module-view .result-box {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.3333%;
     flex: 0 0 33.3333%;
@@ -203,7 +203,7 @@ section.page-details-infobox .detail-page-infobox h3 {
 }
 
 @media (min-width: 1280px) {
-  .module-view .result-box {
+  .c24-modelle .module-view .result-box {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
