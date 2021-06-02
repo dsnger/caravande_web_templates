@@ -79,7 +79,7 @@ section.page-details-infobox .detail-page-infobox h3 {
 
 @media (min-width: 992px) {
   .c24-intro h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -171,4 +171,8 @@ section.page-details-infobox .detail-page-infobox h3 {
 button.baguetteBox-button:focus,
 button.baguetteBox-button:active  {
   outline: none;
+}
+
+.col-form-label {
+  font-weight: 600;
 }
