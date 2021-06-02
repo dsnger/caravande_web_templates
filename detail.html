@@ -25,7 +25,7 @@
         <div class="container">
             <!-- navigationsleiste-->
             <nav class="navbar navbar-expand-lg align-items-center my-1"><a class="navbar-brand text-hide"
-                    href="https://www.caravan24.de/"><img class="navbar-brand__img d-inline-block align-top"
+                    href="/index.html"><img class="navbar-brand__img d-inline-block align-top"
                         src="assets/img/caravan24-logo.svg" alt="Logo Caravan24"><span
                         class="navbar-brand-name">Caravan24</span></a>
                 <h5 class="navbar-claim col ml-2">Wohnmobile mieten &amp; vermieten</h5>
@@ -112,7 +112,7 @@
         <section class="page-details-infobox">
             <div class="container">
                 <div class="row">
-                    <div class="col breadcrumb-links my-4 my-sm-5 my-md-4"><a href="https://www.caravan24.de/index.html"
+                    <div class="col breadcrumb-links my-4 my-sm-4 my-md-4"><a href="https://www.caravan24.de/index.html"
                             title="zur Startseite">
                             <h5 class="d-inline">
                                 Startseite <small><i class="fas fa-chevron-right mr-2" aria-hidden="true"></i></small>
@@ -128,13 +128,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-sm-8 col-md-8 col-lg-9 detail-page-slider mb-4 detail-page-infobox">
-                        <div class="carousel slide card" id="DetailFotoslider"
-                            style="padding: 15px; min-height: 781.167px;">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-9 detail-page-slider mb-4">
+                        <div class="carousel slide card" id="DetailFotoslider">
                             <div class="carousel-outer">
                                 <div class="carousel-inner">
                                     <!--Slides-->
-
                                     <div class="carousel-item active"><a class="lightbox"
                                             href="https://www.wheeloffice.com/img/7085/15207_1orig.jpg">
                                             <div class="slider-lightbox-trigger"><i class="fas fa-expand"
@@ -239,7 +237,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-4 col-md-4 col-lg-3 detail-page-infobox">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 detail-page-infobox">
                         <div class="card card1">
                             <div class="card-body">
                                 <h2>Family Plus Dethleffs Trend A 5887</h2>
@@ -627,9 +625,7 @@
                 $('.preisexs').hide();
                 $('.preisemd').show();
 
-                highest_element = $('.detail-page-infobox .card1').height() + $('.detail-page-infobox .card2').height() + 19;
-                //alert(highest_element);
-                if ($('#DetailFotoslider').height() < highest_element) $('#DetailFotoslider').css('min-height', highest_element + 'px');
+
 
             }
         }

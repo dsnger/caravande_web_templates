@@ -13263,11 +13263,11 @@ strong {
   font-weight: 700;
 }
 a {
-  color: #f8a913;
+  color: #3b785a;
   text-decoration: none !important;
 }
 a:hover {
-  color: #eb9c07;
+  color: #3b785a;
 }
 i.material-icons {
   vertical-align: top;
@@ -13805,7 +13805,7 @@ body > header.sticky .nav-brand {
   transform: translateY(-50%);
 }
 .breadcrumb-links h5 {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
 }
 .breadcrumb-links .breadcrumb-result {
   display: block;
@@ -13816,7 +13816,7 @@ body > header.sticky .nav-brand {
 }
 @media (min-width: 767px) {
   .breadcrumb-links h5 {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   .breadcrumb-links .breadcrumb-result {
     display: inline;
@@ -13827,7 +13827,7 @@ body > header.sticky .nav-brand {
 }
 @media (min-width: 767px) {
   .breadcrumb-links h5 {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
   }
 }
 .section-intro {
