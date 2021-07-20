@@ -71,7 +71,7 @@ $(document).ready(function () {
       }),
         $('#preisRange').slider('refresh');
     });
-  var o = ['<a href="#top" class="back-to-top">Nach oben</a>'].join('');
+  var o = ['<a href="#top" class="back-to-top"></a>'].join('');
   $('body').append(o),
     $('.back-to-top').hide(),
     $(function () {
