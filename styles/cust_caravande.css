@@ -1,7 +1,27 @@
-﻿.page-link.active {
-  color: #ffffff;
-  background-color: #f8a913;
+﻿
+.page-link.active {
+  color: #ff6600;
 }
+
+.page-link.active {
+  color: #ffffff;
+  background-color: #ff6600;
+}
+
+.page-link:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgb(355 102 0 / 25%)!important;
+  box-shadow: 0 0 0 0.2rem rgb(255 102 0 / 25%)!important;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #fff;
+  border-color: #6c757d;
+}
+
+
 .page-details .carousel .carousel-inner {
   max-height: inherit !important;
 }
@@ -13,6 +33,16 @@ section.page-details-infobox .detail-page-infobox .booking-date,
 section.page-details-infobox .detail-page-infobox h3 {
   text-transform: none !important;
 }
+
+
+.gallery-grid .card .card-ribbon {
+  background-color: #ff6600;
+}
+
+.gallery-grid .card .card-ribbon:before {
+  display: none;
+}
+
 
 @media (min-width: 992px) {
   .handlerlist .col-lg-5,
@@ -124,7 +154,7 @@ section.page-details-infobox .detail-page-infobox h3 {
   border-bottom-right-radius: 0.25rem !important;
 }
 
-.c24-btn-vermieter-werden {
+.c24-btn-verkaeufer-werden {
   border-width: 2px;
 }
 
@@ -148,7 +178,7 @@ section.page-details-infobox .detail-page-infobox h3 {
 }
 
 .mehrbutton:hover {
-  background-color: #9bb06d;
+  background-color: #00A9B3;
 }
 
 @media (min-width: 992px) {
@@ -219,3 +249,18 @@ button.baguetteBox-button:active  {
 .col-form-label {
   font-weight: 600;
 }
+
+
+.btn-dark{
+  box-shadow: #ff6600;
+}
+.btn-dark:hover{
+  background-color: #ff6600;
+  border-color: #ff6600;
+}
+
+/* .btn-primary {
+  border-color: #212121;
+  border-width: 2px;
+  box-shadow: none;
+} */
