@@ -65,14 +65,14 @@ section.page-details-infobox .detail-page-infobox h3 {
     margin-top: 0 !important;
   }
   .navbar-brand img {
-    min-width: 275px;
+    max-width: 180px;
   }
   body > header.sticky,
   body > header.sticky-fix {
-    height: 77px;
+    height: 60px;
   }
   .search-fixed-fix {
-    top: 77px;
+    top: 64px;
   }
   .page-searchform + main {
     margin-top: 134px;

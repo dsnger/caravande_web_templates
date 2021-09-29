@@ -14408,10 +14408,10 @@ section.page-details-infobox
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(248, 169, 19, 0.85);
+  background-color: white;
   color: #fff;
-  padding: 0.5rem 0.8rem;
-  height: 54px;
+  padding: 1rem 1.125rem;
+  min-height: 54px;
 }
 .gallery-grid .card .card-ribbon:before {
   position: absolute;
@@ -14429,7 +14429,7 @@ section.page-details-infobox
 .gallery-grid .card .card-ribbon-text {
   white-space: nowrap;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 900;
   margin: 0;
   line-height: 1;
 }

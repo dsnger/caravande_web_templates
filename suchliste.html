@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -23,8 +24,8 @@
   <header class="page-header position-fixed sticky-fix sticky">
     <div class="container">
       <!-- navigationsleiste-->
-      <nav class="navbar navbar-expand-lg align-items-center my-1"><a class="navbar-brand text-hide"
-          href="index.html"><img class="navbar-brand__img d-inline-block align-top" src="assets/img/logo_caravan_de.svg"
+      <nav class="navbar navbar-expand-lg align-items-center"><a class="navbar-brand text-hide"
+          href="index.html"><img class="navbar-brand__img d-inline-block align-top" src="assets/img/Caravan_Logo.svg"
             alt="Logo Caravan24"><span class="navbar-brand-name">Carava</span></a>
         <h5 class="navbar-claim col ml-2">Wohnmobile kaufen</h5>
         <!--hamburger button-->
@@ -661,6 +662,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Results -->
             <div class="row gallery-grid-results list-view">
               <div class="result-box">
                 <div class="card">
@@ -671,32 +674,75 @@
                       <li data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner">
-                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                      <div class="carousel-item active">
+                        <div class="cover-container">
+                          <img  src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                        </div>
                       </div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
+                      <div class="carousel-item">
+                        <img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild">
+                      </div>
                     </div>
-                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
-                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
-                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
-                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
-                        class="sr-only">Next</span></a>
+                    <!--Slider Controler    -->
+                    <a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
                   </div>
                   <div class="card-body text-left">
-                    <h3>Bürstner Argos Time A 670 G</h3>
+                    <h3 class="card-title">Bürstner Argos Time A 670 G</h3>
                     <h4>Campingbus</h4>
+
+                    <div class="card-price mt-2 mb-2">
+                      <span class="card-price-text">49.000 €</span>
+                      <span class="card-price-text-small text-black-50">19,00% MwSt</span>
+                      <a class="card-price-text-small" href="#"><u>Finanzierung berechnen</u></a>
+                    </div>
+
+                    <div class="card-body__feature-list container mt-2">
+                      <div class="row">
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Erstzulassung</div>
+                          <div class="dd"><i class="fas fa-calendar mr-2"></i><strong></i>03/1992</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt ">Schlafplätze</div>
+                          <div class="dd"><i class="fas fa-bed mr-2"></i><strong>4</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Leistung</div>
+                          <div class="dd font-weight-bold"><i class="fas fa-tachometer-alt mr-2"></i><strong>70 kW / 95
+                              PS</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">KM-Stand</div>
+                          <div class="dd"><i class="fas fa-route mr-2"></i><strong>196.480 km</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Gesamtlänge</div>
+                          <div class="dd"><i class="fas fa-ruler-horizontal mr-2"></i><strong>658 cm</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">zul. Gesamtgewicht</div>
+                          <div class="dd"><i class="fas fa-weight mr-2"></i><strong>3.500 kg</strong></div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="card-footer">
-                      <ul class="card-body__feature-list">
-                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                      </ul>
-                      <p class="card-button text-right"><a class="btn btn-dark"
-                          href="Detailansicht.html">Details</a></p>
+                      <p class="card-button text-right"><a class="btn btn-primary" href="Detailansicht.html">Details</a>
+                      </p>
                     </div>
                   </div>
-                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
-                        class="card-ribbon-text-small">/Nacht</span></span></div>
+                  <div class="card-ribbon">
+                    <span class="card-ribbon-text">49.000 €</span>
+                    <span class="card-ribbon-text-small text-black-50">19,00% MwSt</span>
+                    <a class="card-ribbon-text-small" href="#"><u>Finanzierung berechnen</u></a>
+                  </div>
                 </div>
               </div>
               <div class="result-box">
@@ -708,185 +754,81 @@
                       <li data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner">
-                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                      <div class="carousel-item active">
+                        <div class="cover-container">
+                          <img  src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                        </div>
                       </div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
+                      <div class="carousel-item">
+                        <img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild">
+                      </div>
                     </div>
-                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
-                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
-                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
-                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
-                        class="sr-only">Next</span></a>
+                    <!--Slider Controler    -->
+                    <a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
                   </div>
                   <div class="card-body text-left">
-                    <h3>Bürstner Argos Time A 670 G</h3>
+                    <h3 class="card-title">Bürstner Argos Time A 670 G</h3>
                     <h4>Campingbus</h4>
-                    <div class="card-footer">
-                      <ul class="card-body__feature-list">
-                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                      </ul>
-                      <p class="card-button text-right"><a class="btn btn-dark"
-                          href="Detailansicht.html">Details</a></p>
+
+                    <div class="card-price mt-2 mb-2">
+                      <span class="card-price-text">49.000 €</span>
+                      <span class="card-price-text-small text-black-50">19,00% MwSt</span>
+                      <a class="card-price-text-small" href="#"><u>Finanzierung berechnen</u></a>
                     </div>
-                  </div>
-                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
-                        class="card-ribbon-text-small">/Nacht</span></span></div>
-                </div>
-              </div>
-              <div class="result-box">
-                <div class="card">
-                  <div class="search-result carousel slide">
-                    <ol class="carousel-indicators">
-                      <li class="active" data-slide-to="0"></li>
-                      <li data-slide-to="2"></li>
-                      <li data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+
+                    <div class="card-body__feature-list container mt-2">
+                      <div class="row">
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Erstzulassung</div>
+                          <div class="dd"><i class="fas fa-calendar mr-2"></i><strong></i>03/1992</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt ">Schlafplätze</div>
+                          <div class="dd"><i class="fas fa-bed mr-2"></i><strong>4</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Leistung</div>
+                          <div class="dd font-weight-bold"><i class="fas fa-tachometer-alt mr-2"></i><strong>70 kW / 95
+                              PS</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">KM-Stand</div>
+                          <div class="dd"><i class="fas fa-route mr-2"></i><strong>196.480 km</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Gesamtlänge</div>
+                          <div class="dd"><i class="fas fa-ruler-horizontal mr-2"></i><strong>658 cm</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">zul. Gesamtgewicht</div>
+                          <div class="dd"><i class="fas fa-weight mr-2"></i><strong>3.500 kg</strong></div>
+                        </div>
                       </div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
                     </div>
-                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
-                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
-                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
-                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
-                        class="sr-only">Next</span></a>
-                  </div>
-                  <div class="card-body text-left">
-                    <h3>Bürstner Argos Time A 670 G</h3>
-                    <h4>Campingbus</h4>
                     <div class="card-footer">
-                      <ul class="card-body__feature-list">
-                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                      </ul>
-                      <p class="card-button text-right"><a class="btn btn-dark"
-                          href="Detailansicht.html">Details</a></p>
+                      <p class="card-button text-right"><a class="btn btn-primary" href="Detailansicht.html">Details</a>
+                      </p>
                     </div>
                   </div>
-                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
-                        class="card-ribbon-text-small">/Nacht</span></span></div>
-                </div>
-              </div>
-              <div class="result-box">
-                <div class="card">
-                  <div class="search-result carousel slide">
-                    <ol class="carousel-indicators">
-                      <li class="active" data-slide-to="0"></li>
-                      <li data-slide-to="2"></li>
-                      <li data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
-                      </div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                    </div>
-                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
-                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
-                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
-                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
-                        class="sr-only">Next</span></a>
+                  <div class="card-ribbon">
+                    <span class="card-ribbon-text">49.000 €</span>
+                    <span class="card-ribbon-text-small text-black-50">19,00% MwSt</span>
+                    <a class="card-ribbon-text-small" href="#"><u>Finanzierung berechnen</u></a>
                   </div>
-                  <div class="card-body text-left">
-                    <h3>Bürstner Argos Time A 670 G</h3>
-                    <h4>Campingbus</h4>
-                    <div class="card-footer">
-                      <ul class="card-body__feature-list">
-                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                      </ul>
-                      <p class="card-button text-right"><a class="btn btn-dark"
-                          href="Detailansicht.html">Details</a></p>
-                    </div>
-                  </div>
-                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
-                        class="card-ribbon-text-small">/Nacht</span></span></div>
-                </div>
-              </div>
-              <div class="result-box">
-                <div class="card">
-                  <div class="search-result carousel slide">
-                    <ol class="carousel-indicators">
-                      <li class="active" data-slide-to="0"></li>
-                      <li data-slide-to="2"></li>
-                      <li data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
-                      </div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                    </div>
-                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
-                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
-                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
-                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
-                        class="sr-only">Next</span></a>
-                  </div>
-                  <div class="card-body text-left">
-                    <h3>Bürstner Argos Time A 670 G</h3>
-                    <h4>Campingbus</h4>
-                    <div class="card-footer">
-                      <ul class="card-body__feature-list">
-                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                      </ul>
-                      <p class="card-button text-right"><a class="btn btn-dark"
-                          href="Detailansicht.html">Details</a></p>
-                    </div>
-                  </div>
-                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
-                        class="card-ribbon-text-small">/Nacht</span></span></div>
-                </div>
-              </div>
-              <div class="result-box">
-                <div class="card">
-                  <div class="search-result carousel slide">
-                    <ol class="carousel-indicators">
-                      <li class="active" data-slide-to="0"></li>
-                      <li data-slide-to="2"></li>
-                      <li data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active"><img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
-                      </div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-2.jpg" alt="ein Galeriebild"></div>
-                      <div class="carousel-item"><img src="assets/img/result-bild-3.jpg" alt="ein Galeriebild"></div>
-                    </div>
-                    <!--Slider Controler    --><a class="carousel-control-prev" role="button" data-slide="prev"><span
-                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
-                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
-                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
-                        class="sr-only">Next</span></a>
-                  </div>
-                  <div class="card-body text-left">
-                    <h3>Bürstner Argos Time A 670 G</h3>
-                    <h4>Campingbus</h4>
-                    <div class="card-footer">
-                      <ul class="card-body__feature-list">
-                        <li class="feature"><i class="fa fa-map-marker-alt"> </i>Ratingen </li>
-                        <li class="feature"> <i class="fa fa-bed"></i>4</li>
-                        <li class="feature"> <i class="fa fa-user-friends"></i>4</li>
-                      </ul>
-                      <p class="card-button text-right"><a class="btn btn-dark"
-                          href="Detailansicht.html">Details</a></p>
-                    </div>
-                  </div>
-                  <div class="card-ribbon"><span class="card-ribbon-text">ab 43 €<span
-                        class="card-ribbon-text-small">/Nacht</span></span></div>
                 </div>
               </div>
             </div>
+
             <div class="row">
-              <div class="col col-sm-8 col-md-8 col-lg-9 flex-2">
+              <div class="col col-sm-12 col-md-12 col-lg-12 flex-2">
                 <nav aria-label="Seitennavigation">
                   <ul class="pagination">
                     <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">vorherige</a></li>
@@ -910,8 +852,7 @@
           <div class="col-lg-3 mb-3">
             <h3>Unternehmen</h3>
             <p><strong>Caravan.de</strong><br>Prinzipalmarkt/Drubbel 3<br>48143 Münster<br> www.caravan24.com</p>
-            <p>T: 0251 2803 844<br>F: 0251 2803 845<br>E-Mail: <a
-                href="mailto:test@testtamtam.de">info@caravan.de</a>
+            <p>T: 0251 2803 844<br>F: 0251 2803 845<br>E-Mail: <a href="mailto:test@testtamtam.de">info@caravan.de</a>
               <caravan24 class="com"></caravan24>
             </p>
           </div>
