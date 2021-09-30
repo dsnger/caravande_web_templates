@@ -65,31 +65,32 @@ section.page-details-infobox .detail-page-infobox h3 {
     margin-top: 0 !important;
   }
   .navbar-brand img {
-    max-width: 180px;
+    width: 100%;
+    max-width: 240px;
   }
+
   body > header.sticky,
   body > header.sticky-fix {
-    height: 60px;
+    height: 75px;
   }
   .search-fixed-fix {
-    top: 64px;
+    top: 65px;
   }
-  .page-searchform + main {
-    margin-top: 134px;
-  }
+
   .navbar-claim {
-    font-size: 36px !important;
+    font-size: 24px !important;
     padding-top: 7px;
     text-align: center;
+    font-weight: 600;
   }
   body > header.sticky-fix .navbar-brand,
   body > header.sticky .navbar-brand {
-    max-width: 275px !important;
+    max-width: 240px !important;
   }
 }
 @media (max-width: 991px) {
   .navbar-brand img {
-    min-width: 150px;
+    max-width: 160px;
   }
 }
 

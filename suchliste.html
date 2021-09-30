@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Hind:400,500,700&amp;display=swap" rel="stylesheet">
   <link defer href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css"
     rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
   <script defer src="https://kit.fontawesome.com/93864702c8.js"></script>
   <!--if lt IE 9script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')-->
   <script src="scripts/js/jquery-3.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -22,54 +23,207 @@
   <!--header-->
   <!-- page header-->
   <header class="page-header position-fixed sticky-fix sticky">
-    <div class="container">
-      <!-- navigationsleiste-->
-      <nav class="navbar navbar-expand-lg align-items-center"><a class="navbar-brand text-hide"
-          href="index.html"><img class="navbar-brand__img d-inline-block align-top" src="assets/img/Caravan_Logo.svg"
-            alt="Logo Caravan24"><span class="navbar-brand-name">Carava</span></a>
-        <h5 class="navbar-claim col ml-2">Wohnmobile kaufen</h5>
-        <!--hamburger button-->
-        <!-- navigations menu-->
-        <button class="btn btn-sm btn-outline-primary ml-auto c24-btn-verkaeufer-werden" type="link"
-          onclick="window.location.href='vermieterwerden.html'">Verkäufer werden</button>
-      </nav>
-    </div>
+    <!-- navigationsleiste-->
+    <nav class="container navbar navbar-expand-lg align-items-center">
+
+      <!-- logo -->
+      <a class="navbar-brand text-hide mr-5 d-flex align-items-center" href="index.html"><img
+          class="navbar-brand__img d-inline-block align-top" src="assets/img/Caravan_Logo.svg"
+          alt="Logo Caravan24"><span class="navbar-brand-name">Caravan.de</span></a>
+
+      <!-- mobile menu -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Suchen <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownVerkaufen" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Verkaufen
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownVerkaufen">
+              <a class="dropdown-item" href="#">Händler</a>
+              <a class="dropdown-item" href="#">Privat</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mieten</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center ml-auto my-lg-0">
+          <a class="btn btn-sm btn-outline-primary c24-btn-verkaeufer-werden" type="link" href="#">Händler Login</a>
+        </div>
+        <ul class="navbar-nav ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownLang" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="flag-icon flag-icon-de"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" style="min-width:60px" aria-labelledby="dropdownLang">
+              <a class="dropdown-item text-center" href="#"><span class="flag-icon flag-icon-gb"></span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- navigations menu-->
+    </nav>
   </header>
-  <!--Suchformular-->
-  <section class="page-searchform search-fixed-fix">
-    <div class="container-fluid wrapper">
-      <form class="hero-searchform__form form-inline">
-        <div class="form-row">
-          <div class="col input-group hero-searchform__vehicle">
-            <div class="btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-default btn-c24icon-sm mr-2 active">
-                <input type="radio" name="vehicleType" value="1" autocomplete="off"><i class="c24icon c24icon-alkoven"
-                  data-toggle-search="tooltip" data-placement="bottom" title="Wohnmobil"></i>
-              </label>
-              <label class="btn btn-default btn-c24icon-sm">
-                <input type="radio" name="vehicleType" value="2" autocomplete="off"><i class="c24icon c24icon-wohnwagen"
-                  data-toggle-search="tooltip" data-placement="bottom" title="Wohnwagen"></i>
-              </label>
-            </div>
-          </div>
-          <div class="col input-group hero-searchform__where">
-            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-            </div>
-            <input class="form-control flex-4" id="inputWhere" type="text" placeholder="Wo?" aria-label="Wo">
-          </div>
-          <div class="col input-group hero-searchform__daterange">
-            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-            </div>
-            <input class="form-control" id="inputStartdate" name="daterange" type="text" placeholder="Abholung"
-              aria-label="Abholung">
-          </div>
-          <div class="col input-group hero-searchform__submit">
-            <button class="btn btn-primary" type="submit">Suchen</button>
+
+  <section class="hero">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs">
+          <div class="hero__image-box position-relative"
+            style="background-image: url('assets/img/header_fotolia_132213676_M.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <!-- <img class="hero__image img-fluid" src="assets/img/header_fotolia_132213676_M.jpg"> -->
+            <section class="page-searchform">
+              <div class="container mx-auto">
+                <div class="row">
+                  <div class="col-md-6">
+
+                    <div class="p-3 bg-white rounded">
+                      <!-- Suchformular -->
+                      <form class="form" id="components">
+                        <!-- Typen -->
+                        <div class="form-row mb-3">
+                          <div class="col input-group hero-searchform__vehicle d-flex justify-content-between">
+
+                            <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                              <label class="btn btn-default btn-c24icon-lg active">
+                                <input id="Alkoven" type="checkbox" autocomplete="off" value="Alkoven">
+                                <svg class="c24icon" width="100%" height="100%" viewBox="0 0 520 350"
+                                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                  <use xlink:href="#img-c24-icon-alkoven"></use>
+                                </svg>
+                              </label><small class="mb-2 text-center">Alkoven</small>
+                            </div>
+                            <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                              <label class="btn btn-default btn-c24icon-lg">
+                                <input id="Kastenwagen" type="checkbox" autocomplete="off" value="Kastenwagen">
+                                <svg class="c24icon" width="100%" height="100%" viewBox="0 0 520 350"
+                                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                  <use xlink:href="#img-c24-icon-kastenwagen"></use>
+                                </svg>
+                              </label><small class="mb-2 text-center">Kastenwagen</small>
+                            </div>
+                            <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                              <label class="btn btn-default btn-c24icon-lg">
+                                <input id="Teilintegriert" type="checkbox" autocomplete="off" value="Teilintegriert">
+                                <svg class="c24icon" width="100%" height="100%" viewBox="0 -60 520 350"
+                                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                  <use xlink:href="#img-c24-icon-teilintegriert"></use>
+                                </svg>
+                              </label><small class="mb-2 text-center">Teilintegriert</small>
+                            </div>
+                            <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                              <label class="btn btn-default btn-c24icon-lg">
+                                <input id="Vollintegriert" type="checkbox" autocomplete="off" value="Vollintegriert">
+                                <svg class="c24icon" width="100%" height="100%" viewBox="0 -30 520 350"
+                                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                  <use xlink:href="#img-c24-icon-vollintegriert"></use>
+                                </svg>
+                              </label><small class="mb-2 text-center">Vollintegriert</small>
+                            </div>
+                            <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                              <label class="btn btn-default btn-c24icon-lg">
+                                <input id="Wohnwagen" type="checkbox" autocomplete="off" value="Wohnwagen">
+                                <svg class="c24icon" width="100%" height="100%" viewBox="0 -30 520 350"
+                                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                  <use xlink:href="#img-c24-icon-wohnwagen"></use>
+                                </svg>
+                              </label><small class="mb-2 text-center">Wohnwagen </small>
+                            </div>
+
+                            <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                              <label class="btn btn-default btn-c24icon-lg">
+                                <input id="Sonstige" type="checkbox" autocomplete="off" value="Sonstige">
+                                <svg class="c24icon" width="100%" height="100%" viewBox="0 -30 520 350"
+                                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                  <use xlink:href="#img-c24-icon-sonstige"></use>
+                                </svg>
+                              </label><small class="mb-2 text-center">Sonstige</small>
+                            </div>
+
+                          </div>
+                        </div>
+                        <!-- Suchangaben Optionen -->
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <select id="inputState" class="form-control">
+                              <option selected>Hersteller</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <select id="inputState" class="form-control">
+                              <option selected>Modell</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <select id="inputState" class="form-control">
+                              <option selected>Preis von</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <select id="inputState" class="form-control">
+                              <option selected>Preis bis</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <select id="inputState" class="form-control">
+                              <option selected>Gewicht bis</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <select id="inputState" class="form-control">
+                              <option selected>Erstzulassung</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <select id="inputState" class="form-control">
+                              <option selected>Kilometerstand</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <select id="inputState" class="form-control">
+                              <option selected>Zustand</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <a href="#" class=""><u>Detailsuche</u></a>
+                          </div>
+                          <div class="col-md-6 d-flex">
+                            <button type="submit" class="btn btn-primary ml-md-auto px-4 d-inline-block">Suchen</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   </section>
+  <!--Suchformular-->
+
   <main class="page-content mx-auto">
     <div class="container with-marginal">
       <div class="row">
@@ -165,6 +319,16 @@
                                     <use xlink:href="#img-c24-icon-wohnwagen"></use>
                                   </svg>
                                 </label><small class="mb-2 text-center">Wohnwagen </small>
+                              </div>
+
+                              <div class="btn-group-toggle d-flex flex-column" data-toggle="buttons">
+                                <label class="btn btn-default btn-c24icon-lg">
+                                  <input id="Sonstige" type="checkbox" autocomplete="off" value="Sonstige">
+                                  <svg class="c24icon" width="100%" height="100%" viewBox="0 -30 520 350"
+                                    xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="#img-c24-icon-sonstige"></use>
+                                  </svg>
+                                </label><small class="mb-2 text-center">Sonstige</small>
                               </div>
                             </div>
                           </div>
@@ -676,7 +840,7 @@
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <div class="cover-container">
-                          <img  src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                          <img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
                         </div>
                       </div>
                       <div class="carousel-item">
@@ -687,7 +851,11 @@
                       </div>
                     </div>
                     <!--Slider Controler    -->
-                    <a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+                    <a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
                   </div>
                   <div class="card-body text-left">
                     <h3 class="card-title">Bürstner Argos Time A 670 G</h3>
@@ -756,7 +924,7 @@
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <div class="cover-container">
-                          <img  src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
+                          <img src="assets/img/result-bild-1.jpg" alt="ein Galeriebild">
                         </div>
                       </div>
                       <div class="carousel-item">
@@ -767,7 +935,11 @@
                       </div>
                     </div>
                     <!--Slider Controler    -->
-                    <a class="carousel-control-prev" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+                    <a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
                   </div>
                   <div class="card-body text-left">
                     <h3 class="card-title">Bürstner Argos Time A 670 G</h3>
@@ -855,6 +1027,10 @@
             <p>T: 0251 2803 844<br>F: 0251 2803 845<br>E-Mail: <a href="mailto:test@testtamtam.de">info@caravan.de</a>
               <caravan24 class="com"></caravan24>
             </p>
+            <h4>Payment</h4>
+            <i class="fab fa-cc-visa text-white" style="font-size: 2rem;"></i> <i
+              class="fab fa-cc-mastercard text-white" style="font-size: 2rem;"></i> <i
+              class="fab fa-cc-paypal text-white" style="font-size: 2rem;"></i>
           </div>
           <div class="col-lg mb-5">
             <h3>Caravan - Wohnmobile und Wohnwagen online kaufen</h3>
@@ -917,15 +1093,34 @@
             d="M0,34V30.14C0,13.5,14.5,0,31.13,0h334a34.15,34.15,0,0,1,34.14,34.17,3,3,0,0,1-3,3H388l30.16,29.48A69.48,69.48,0,0,0,446,84.56a85.71,85.71,0,0,1,58,81.11v40.75a8.29,8.29,0,0,1-8.28,8.29H452.51a37.29,37.29,0,0,1-72.73,0H167.34a37.29,37.29,0,0,1-72.73,0H30.94A31,31,0,0,1,0,183.77V34.57C0,34.37,0,34.19,0,34ZM416.14,227.15a20.73,20.73,0,1,0-20.72-20.73A20.77,20.77,0,0,0,416.14,227.15ZM314.52,107.87H408c-5-3.65-14.68-15.76-18.94-20.26l-23-25.25c-9.88-10.45-17.8-17.44-32.19-17.44H314.52a4,4,0,0,0-4,4v55A4,4,0,0,0,314.52,107.87Zm-143.9-31h61.89a4,4,0,0,0,4-4V48.05a4,4,0,0,0-4-4H170.62a4,4,0,0,0-4,4V72.91A4,4,0,0,0,170.62,76.91ZM131,227.15a20.73,20.73,0,1,0-20.73-20.73A20.76,20.76,0,0,0,131,227.15ZM36.49,108.62H137a4,4,0,0,0,4-4V48.81a4,4,0,0,0-4-4H36.49a4,4,0,0,0-4,4v55.81A4,4,0,0,0,36.49,108.62Z">
           </path>
         </g>
-        <g id="img-c24-icon-vollintegriert">
+        <!-- <g id="img-c24-icon-vollintegriert">
           <path xmlns="http://www.w3.org/2000/svg"
             d="M504,54.71V8.29A8.29,8.29,0,0,0,495.72,0H362.26a54.79,54.79,0,0,0-54.08,46.42H40a40,40,0,0,0-40,40V213.61a31,31,0,0,0,30.94,30.94H65.6A37.28,37.28,0,0,0,131,259.67a37.28,37.28,0,0,0,65.38-15.12H379.78a37.3,37.3,0,0,0,72.73,0h43.21a8.29,8.29,0,0,0,8.29-8.29V140.15a48.51,48.51,0,0,0-9.5-29L461.45,66.25c-.83-1.13-1.72-2.2-2.64-3.25h36.91A8.29,8.29,0,0,0,504,54.71ZM102,257a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,102,257ZM53.05,154.19V105.28h126v48.91ZM160,257a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,160,257Zm141.76-29H228V109.42h73.78Zm114.39,29a20.73,20.73,0,1,1,20.73-20.72A20.75,20.75,0,0,1,416.14,257Zm47-132.51H363.63V79.58h58.62a15.57,15.57,0,0,1,12.49,6.31ZM475.83,34.4H351.48V28.6H475.83Z">
           </path>
+        </g> -->
+        <g id="img-c24-icon-vollintegriert">
+          <path d="M114.2,165.4c30.1,0.1,54.6,24.5,54.6,54.6h165.4c0-30.2,24.5-54.6,54.6-54.6c30.1,0,54.6,24.4,54.6,54.6h29.7 c17,0,30.7-13.8,30.7-30.7v-67.2c0-5.6-1.8-11.1-5.1-15.6l-40.3-55.7l22.3,0.5c12.6,0.3,23-9.7,23.2-22.3c0-0.2,0-0.3,0-0.5v-5.8 c0-12.5-10.1-22.7-22.7-22.8H21.8C9.3,0-0.9,10.2-0.9,22.8c0,0,0,0,0,0v174.5c0,12.6,10.2,22.8,22.8,22.8h37.8
+          C59.6,189.9,84.1,165.5,114.2,165.4z M349.3,71.8c0-6.2,5-11.2,11.2-11.2H436c3.6,0,6.9,1.7,9,4.6l25,34.4 c3.4,4.6,2.4,11.1-2.3,14.5c-1.8,1.3-3.9,2-6.1,2H360.3c-6.1-0.1-11-5-11-11.2V71.8z M213.3,89.8c0-7.6,6.1-13.7,13.7-13.7l0,0h49.6 c7.6,0,13.7,6.1,13.8,13.7v95.7c0,7.6-6.2,13.7-13.8,13.7H227c-7.6,0-13.7-6.1-13.7-13.7v0L213.3,89.8z M121.1,75.4 c0-8.2,6.7-14.9,14.9-14.9h25.9c8.2,0,14.9,6.6,14.9,14.8c0,0,0,0,0,0.1v26c0,8.2-6.7,14.8-14.9,14.8H136c-8.2,0-14.9-6.6-14.9-14.8 L121.1,75.4z M31.7,101.4v-26c0-8.2,6.7-14.9,14.9-14.9h26c8.2,0,14.9,6.6,14.9,14.8c0,0,0,0,0,0.1v26c0,8.2-6.7,14.9-14.9,14.9h-26 C38.4,116.2,31.7,109.6,31.7,101.4z" />
+          <path d="M114.2,170.8c-27.1,0-49.1,22-49.1,49.1s22,49.1,49.1,49.1s49.1-22,49.1-49.1S141.4,170.8,114.2,170.8z M114.2,240.9 c-11.5,0-20.9-9.4-20.9-20.9c0-11.5,9.4-20.9,20.9-20.9c11.5,0,20.9,9.4,20.9,20.9C135.1,231.6,125.8,240.9,114.2,240.9 C114.2,240.9,114.2,240.9,114.2,240.9z" />
+          <path d="M388.9,170.8c-27.1,0-49.1,22-49.1,49.1c0,27.1,22,49.1,49.1,49.1c27.1,0,49.1-22,49.1-49.1v0 C438,192.8,416,170.8,388.9,170.8z M388.9,240.9c-11.5,0-20.9-9.4-20.9-20.9c0-11.5,9.4-20.9,20.9-20.9c11.5,0,20.9,9.4,20.9,20.9 l0,0C409.8,231.6,400.4,240.9,388.9,240.9z" />
         </g>
         <g id="img-c24-icon-wohnwagen">
           <path xmlns="http://www.w3.org/2000/svg"
             d="M38.69,20.15h88.48V11.49A11.5,11.5,0,0,1,138.66,0h80.18a11.49,11.49,0,0,1,11.49,11.5v8.65h141A38.74,38.74,0,0,1,410,58.84l23.68,163.35h52.93a8.37,8.37,0,0,1,8.44,7.64,8.18,8.18,0,0,1-8.16,8.72H452.53v20.17a8.35,8.35,0,0,1-7.63,8.44,8.18,8.18,0,0,1-8.73-8.16V238.55H290.46a36.8,36.8,0,0,1-71.76,0H8.18A8.18,8.18,0,0,1,0,230.37V58.84A38.69,38.69,0,0,1,38.69,20.15ZM371.29,156V102.68a4,4,0,0,0-4-4H271.41a4,4,0,0,0-4,4V156a4,4,0,0,0,4,4h95.88A4,4,0,0,0,371.29,156ZM254.58,250.82a20.45,20.45,0,1,0-20.45-20.45A20.48,20.48,0,0,0,254.58,250.82ZM191.14,160H245.3a4,4,0,0,0,4-4V102.68a4,4,0,0,0-4-4H191.14a4,4,0,0,0-4,4V156A4,4,0,0,0,191.14,160ZM46.81,222.14h76.07v-121A4.09,4.09,0,0,0,118.79,97H50.9a4.09,4.09,0,0,0-4.09,4.09Z">
           </path>
+        </g>
+
+        <g id="img-c24-icon-sonstige">
+          <path d="M283.9,13.7h-120c0-8.4-6.8-15.2-15.2-15.2H61.4c-8.4,0-15.2,6.8-15.2,15.2v1.8H10.8c-4.2,0-7.6,3.4-7.6,7.6v129.7
+            c0,4.2,3.4,7.6,7.6,7.6h190.9c4.2,0,7.6-3.4,7.6-7.6l-0.1-75.2c0-4.2,3.4-7.6,7.6-7.6h67.1c10.1,0,18.3-8.2,18.3-18.3V32
+            C302.2,21.9,294,13.7,283.9,13.7z M155.9,113.8H53c-3.9,0-7.1-3.3-7.1-7.3V64.9c0-4,3.2-7.3,7.1-7.3h102.9c3.9,0,7.1,3.3,7.1,7.3
+            v41.7C163,110.6,159.8,113.8,155.9,113.8z"/>
+          <path d="M409.5,182.5c0.2-12.5,0.8-22.1-17.4-26.4l-39.4-6.7l-25.6-42.6c-7.8-13.1-22-21.1-37.3-21.1h-59.2c-6.1,0-11,4.9-11,11v73
+            L4.7,170.2c-2.4,0-4.4,2-4.4,4.4v41.1c0,10.6,8.6,19.3,19.3,19.3h16c0,20.8,16.9,37.6,37.6,37.6s37.6-16.8,37.6-37.6h178.5
+            c0,20.8,16.9,37.6,37.6,37.6c20.8,0,37.6-16.8,37.6-37.6h27.2c10.2,0,18.5-8.3,18.5-18.5L409.5,182.5z M94.2,235
+            c0,11.6-9.4,21-21,21c-13,0-23.2-11.8-20.6-25.2c1.6-8.2,8.2-14.8,16.4-16.4C82.5,211.8,94.2,222,94.2,235
+            C94.2,235,94.2,235,94.2,235z M247.3,147.8v-40.9h41c8,0,15.4,4.2,19.5,11.1l17.6,29.8H247.3z M348.3,235c0,11.6-9.4,21-21,21
+            c-13,0-23.2-11.8-20.6-25.2c1.6-8.2,8.2-14.8,16.4-16.4C336.6,211.8,348.3,222,348.3,235C348.3,235,348.3,235,348.3,235z"/>
         </g>
       </defs>
     </svg>
