@@ -25,9 +25,9 @@
 .page-details .carousel .carousel-inner {
   max-height: inherit !important;
 }
-.gallery-grid .card .card-body h3 {
+.card .card-body h3 {
   text-transform: none !important;
-  margin-right: 90px;
+  /* margin-right: 90px; */
 }
 section.page-details-infobox .detail-page-infobox .booking-date,
 section.page-details-infobox .detail-page-infobox h3 {
@@ -35,11 +35,11 @@ section.page-details-infobox .detail-page-infobox h3 {
 }
 
 
-.gallery-grid .card .card-ribbon {
+card .card-ribbon {
   background-color: #ff6600;
 }
 
-.gallery-grid .card .card-ribbon:before {
+.card .card-ribbon:before {
   display: none;
 }
 
