@@ -44,22 +44,8 @@ section.page-details-infobox .detail-page-infobox h3 {
 } */
 
 
-@media (min-width: 992px) {
-  .handlerlist .col-lg-5,
-  .handlerlist.gallery-grid .list-view .card .carousel,
-  .handlerlist.gallery-grid .list-view .card .img-frame {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 30% !important;
-    flex: 0 0 30% !important;
-    max-width: 30% !important;
-  }
-  .handlerlist .col-lg-7,
-  .handlerlist.gallery-grid .list-view .card .card-body {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 70% !important;
-    flex: 0 0 70% !important;
-    max-width: 70% !important;
-  }
+@media (min-width: 1024px) {
+  
 
   .my-1 {
     margin-top: 0 !important;
