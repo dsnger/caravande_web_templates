@@ -215,7 +215,7 @@
                               </select>
                             </div>
                             <div class="col-6">
-                              <a href="#" class=""><u>Detailsuche</u></a>
+                              <a href="#" class="btn-link"><u>Detailsuche</u></a>
                             </div>
                             <div class="col-6 d-flex">
                               <button type="submit" class="btn btn-primary ml-auto px-4 d-inline-block">Suchen</button>
@@ -265,10 +265,14 @@
                     </div>
                   </div>
                   <div class="carousel-item">
+                    <div class="cover-container">
                     <img src="assets/img/AdobeStock_79714527_Preview.jpeg" alt="ein Galeriebild">
+                    </div>
                   </div>
                   <div class="carousel-item">
+                    <div class="cover-container">
                     <img src="assets/img/AdobeStock_79714529_Preview.jpeg" alt="ein Galeriebild">
+                    </div>
                   </div>
                 </div>
                 <!--Slider Controler    -->
@@ -349,10 +353,14 @@
                     </div>
                   </div>
                   <div class="carousel-item">
+                    <div class="cover-container">
                     <img src="assets/img/AdobeStock_161247285_Preview.jpeg" alt="ein Galeriebild">
+                    </div>
                   </div>
                   <div class="carousel-item">
+                    <div class="cover-container">
                     <img src="assets/img/AdobeStock_253523099_Preview.jpeg" alt="ein Galeriebild">
+                    </div>
                   </div>
                 </div>
                 <!--Slider Controler    -->
@@ -438,10 +446,14 @@
                     </div>
                   </div>
                   <div class="carousel-item">
+                    <div class="cover-container">
                     <img src="assets/img/AdobeStock_161247285_Preview.jpeg" alt="ein Galeriebild">
+                    </div>
                   </div>
                   <div class="carousel-item">
+                    <div class="cover-container">
                     <img src="assets/img/AdobeStock_253523099_Preview.jpeg" alt="ein Galeriebild">
+                    </div>
                   </div>
                 </div>
                 <!--Slider Controler    -->
@@ -512,7 +524,7 @@
               </div>
             </div>
           </div>
-          <div class="result-box col-sm-6 col-md-4 col-lg-3">
+          <div class="result-box col-sm-6 col-md-4 col-lg-3 d-block d-sm-block d-md-none d-lg-block">
             <div class="card">
               <div class="search-result carousel slide">
                 <ol class="carousel-indicators">
@@ -527,10 +539,14 @@
                     </div>
                   </div>
                   <div class="carousel-item">
+                    <div class="cover-container">
                     <img src="assets/img/AdobeStock_161247285_Preview.jpeg" alt="ein Galeriebild">
+                    </div>
                   </div>
                   <div class="carousel-item">
+                    <div class="cover-container">
                     <img src="assets/img/AdobeStock_253523099_Preview.jpeg" alt="ein Galeriebild">
+                    </div>
                   </div>
                 </div>
                 <!--Slider Controler    -->
@@ -607,23 +623,52 @@
 
     <!-- Filter und Suchergebnisse  -->
     <div class="container with-marginal">
+      <div class="row mb-1 d-md-none">
+        <div class="col-sm-12 col-md-4 col-lg-3"></div>
+        <div class="col-sm-12 col-md-8 col-lg-9">
+          <div class="row d-flex align-items-center">
+            <div class="col">
+              <div class="alert alert-primary" role="alert">
+                88.000 Fahrzeuge gefunden!
+              </div>
+            </div>
+              <div class="form-group col-md-4 col-lg-3">
+                <select id="inputState" class="form-control">
+                  <option selected>sortieren nach...</option>
+                  <option>...</option>
+                </select>
+              </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
           <section class="searchfilter">
             <div class="row">
-              <div class="col breadcrumb-links my-4 my-sm-4 d-xs-none d-md-flex">
+              <div class="col breadcrumb-links mt-4 mt-sm-4 d-xs-none d-md-flex">
                 <h5 class="d-inline"><i class="fas fa-filter mr-2"></i>Suchfilter:</h5>
               </div>
               <div class="col breadcrumb-links mt-4 mb-2 d-xs-flex d-md-none">
-                <button class="btn btn-primary px-3 mb-2" data-toggle="collapse" href="#collapseSearchfilter"
-                  role="button" aria-expanded="false" aria-controls="collapseSearchfilter"><i
-                    class="fas fa-filter mr-2"></i>Suchfilter</button>
+                <button class="btn btn-primary px-3 mb-2" data-toggle="collapse" href="#collapseSearchfilter" role="button" aria-expanded="false" aria-controls="collapseSearchfilter"><i class="fas fa-filter mr-2"></i>Suchfilter</button>
+              </div>
+              <div class="col d-flex">
+                <button class="btn btn-link mt-3 mt-sm-3 ml-auto" type="reset" value="reset"><i class="fas fa-times mr-2"></i>zurücksetzen</button>
               </div>
             </div>
             <div class="row">
               <div class="col">
                 <div class="collapse" id="collapseSearchfilter">
                   <form id="searchFilterForm">
+                      <!--Suchfeld Hersteller-->
+                      <div class="form-row">
+                        <div class="input-group w-100 p-3">
+                          <input id="hersteller" class="form-control icon-right d-block" type="text" value="" placeholder="Hersteller / Modell" name="hersteller">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                 
                     <div class="accordion" id="searchFilter">
                       <!--akkordion 1-->
                       <div class="card">
@@ -1168,8 +1213,9 @@
                         </div>
                       </div>
                     </div>
-                    <button class="btn btn-tertiary btn-sm mt-3" type="reset" value="reset"><i
-                        class="fas fa-times mr-2"></i>zurücksetzen</button>
+                    <div class="col d-flex">
+                      <button class="btn btn-link mt-3 mt-sm-3 ml-md-auto" type="reset" value="reset"><i class="fas fa-times mr-2"></i>zurücksetzen</button>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -1178,13 +1224,66 @@
         </div>
         <div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
           <section class="gallery-grid result-list">
-            <div class="row">
+            <div class="row align-items-center d-none d-md-flex">
+              <div class="col">
+                <div class="alert alert-primary" role="alert">
+                  88.000 Fahrzeuge gefunden!
+                </div>
+              </div>
+                <div class="form-group col-md-4 col-lg-3">
+                  <select id="inputState" class="form-control">
+                    <option selected>Sortieren nach...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+            </div>
+            <div class="row mt-3 mb-2 d-flex align-items-center">
+              <div class="col">
+                <div class="tagchip fade show">
+                  Adria
+                  <button type="button" class="close ml-2" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="tagchip fade show">
+                  Baujahr ab 2010
+                  <button type="button" class="close ml-2" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="tagchip fade show">
+                  30.000km
+                  <button type="button" class="close ml-2" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="tagchip fade show">
+                  87kW (118PS)
+                  <button type="button" class="close ml-2" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="tagchip fade show">
+                  Kastenwagen
+                  <button type="button" class="close ml-2" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="tagchip fade show">
+                  gebraucht
+                  <button type="button" class="close ml-2" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
               <div class="col breadcrumb-links my-4 my-sm-4">
                 <span class="d-inline"><a href="index.html" title="zur Startseite">Startseite <small><i
                         class="fas fa-chevron-right breadcumb-sep mx-1"></i></small></a></span> <span
                   class="d-inline">Suchergebnisse</span>
               </div>
-            </div>
+            </div> -->
             <!--CHANGE LIST VIEW BUTTONS-->
             <div class="row">
               <div class="col col-sm-8 col-md-8 col-lg-9 flex-2">
@@ -1225,10 +1324,14 @@
                         </div>
                       </div>
                       <div class="carousel-item">
+                        <div class="cover-container">
                         <img src="assets/img/AdobeStock_79714527_Preview.jpeg" alt="ein Galeriebild">
+                        </div>
                       </div>
                       <div class="carousel-item">
+                        <div class="cover-container">
                         <img src="assets/img/AdobeStock_79714529_Preview.jpeg" alt="ein Galeriebild">
+                        </div>
                       </div>
                     </div>
                     <!--Slider Controler    -->
@@ -1309,10 +1412,102 @@
                         </div>
                       </div>
                       <div class="carousel-item">
+                        <div class="cover-container">
                         <img src="assets/img/AdobeStock_161247285_Preview.jpeg" alt="ein Galeriebild">
+                        </div>
                       </div>
                       <div class="carousel-item">
+                        <div class="cover-container">
                         <img src="assets/img/AdobeStock_253523099_Preview.jpeg" alt="ein Galeriebild">
+                        </div>
+                      </div>
+                    </div>
+                    <!--Slider Controler    -->
+                    <a class="carousel-control-prev" role="button" data-slide="prev"><span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="sr-only">Previous</span></a><a class="carousel-control-next" role="button"
+                      data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="sr-only">Next</span></a>
+                  </div>
+                  <div class="card-body text-left">
+                    <h3 class="card-title">Bürstner Argos Time A 670 G</h3>
+                    <h4>Campingbus</h4>
+
+                    <div class="card-price mt-2 mb-2">
+                      <span class="card-price-text">49.000 €</span>
+                      <span class="card-price-text-small text-black-50">zzgl. 19% MwSt</span>
+                      <a class="card-price-text-small" href="#"><u>Finanzierung berechnen</u></a>
+                    </div>
+
+                    <div class="card-body__feature-list container mt-2">
+                      <div class="row">
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Erstzulassung</div>
+                          <div class="dd"><i class="fas fa-calendar mr-2"></i><strong></i>03/1992</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt ">Schlafplätze</div>
+                          <div class="dd"><i class="fas fa-bed mr-2"></i><strong>4</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Leistung</div>
+                          <div class="dd font-weight-bold"><i class="fas fa-tachometer-alt mr-2"></i><strong>70 kW / 95
+                              PS</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">KM-Stand</div>
+                          <div class="dd"><i class="fas fa-route mr-2"></i><strong>196.480 km</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">Gesamtlänge</div>
+                          <div class="dd"><i class="fas fa-ruler-horizontal mr-2"></i><strong>658 cm</strong></div>
+                        </div>
+
+                        <div class="col-sm-4 py-1">
+                          <div class="dt">zul. Gesamtgewicht</div>
+                          <div class="dd"><i class="fas fa-weight mr-2"></i><strong>3.500 kg</strong></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <p class="card-button text-right"><a class="btn btn-primary" href="detail.html">Details</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-ribbon">
+                    <span class="card-ribbon-text">49.000 €</span>
+                    <span class="card-ribbon-text-small text-black-50">zzgl. 19% MwSt</span>
+                    <a class="card-ribbon-text-small" href="#"><u>Finanzierung berechnen</u></a>
+                  </div>
+                </div>
+              </div>
+              <div class="result-box">
+                <div class="card">
+                  <div class="search-result carousel slide">
+                    <ol class="carousel-indicators">
+                      <li class="active" data-slide-to="0"></li>
+                      <li data-slide-to="2"></li>
+                      <li data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="cover-container">
+                          <img src="assets/img/AdobeStock_55168597_Preview.jpeg" alt="ein Galeriebild">
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="cover-container">
+                        <img src="assets/img/AdobeStock_161247285_Preview.jpeg" alt="ein Galeriebild">
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="cover-container">
+                        <img src="assets/img/AdobeStock_253523099_Preview.jpeg" alt="ein Galeriebild">
+                        </div>
                       </div>
                     </div>
                     <!--Slider Controler    -->
