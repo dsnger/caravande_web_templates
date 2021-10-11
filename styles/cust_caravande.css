@@ -9,7 +9,6 @@
 }
 
 .page-link:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgb(355 102 0 / 25%)!important;
   box-shadow: 0 0 0 0.2rem rgb(255 102 0 / 25%)!important;
 }
 
