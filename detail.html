@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Details zu: Family Plus Dethleffs Trend A 5887</title>
     <meta name="description" content="DESCRIPTION">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/cust_caravande.css">
+    <link rel="stylesheet" href="dist/css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link href="https://fonts.googleapis.com/css?family=Hind:400,500,700&amp;display=swap" rel="stylesheet">
-    <link defer href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css"
-        rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <script defer src="https://kit.fontawesome.com/93864702c8.js"></script>
     <!--if lt IE 9script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')-->
-    <script src="scripts/js/jquery-3.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+    <script src="dist/js/jquery.js"></script>
 </head>
 
 <body class="suchliste-page caravande">
@@ -633,34 +630,6 @@
             </div>
         </section>
     </main>
-    <script type="text/javascript">
-        $(function () {
-            legenda();
-        });
-
-        $(window).resize(function () {
-            legenda();
-        });
-
-        timer = setTimeout(function () {
-            legenda();
-        }, 750);
-
-        function legenda() {
-            var breite = $('body').width();
-            if (breite > 10 && breite <= 740) {
-                $('.preisexs').show();
-                $('.preisemd').hide();
-            }
-            else {
-                $('.preisexs').hide();
-                $('.preisemd').show();
-
-
-
-            }
-        }
-    </script>
 
     <footer class="bg-dark text-white">
         <section class="footer-content">
@@ -814,11 +783,8 @@
     <script src="scripts/js/popper.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"> </script>
-    <script src="scripts/js/vendor-dist.js"></script>
-    <script src="scripts/js/app-dist.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="styles/jquery.css" media="screen">
-    <script type="text/javascript" src="scripts/js/jquery.js"></script>
+    <script src="dist/js/vendor-dist.min.js" defer></script>
+    <script src="dist/js/app-dist.min.js" defer></script>
     <a href="#top" class="back-to-top">Nach oben</a>
 
 </body>
